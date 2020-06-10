@@ -11,12 +11,15 @@ def get_inner_info(url):
     if response.status_code == 200:
         html_inner = BeautifulSoup(response.text, 'html.parser')
         heading = html_inner.find('h1', class_='heading')
-        print(heading.get_text())
         trs = html_inner.find('table', class_='w620').findAll('tr')
         print(trs)
+        tds = []
         for tr in trs:
             for td in tr:
-                print(td)
+                tds.append(td)
+        print('-'*20)
+        print(tds)
+
     else:
         print(f'error, not 200 for {url}')
 
@@ -24,20 +27,10 @@ def get_page(url):
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         html_soup = BeautifulSoup(response.text, 'html.parser')
-        trs = html_soup.findAll('tr', class_=('vip', 'odd', 'even'))
-        a_list = []
-        for tr in range(len(trs)):
-            a_list.append('https://ru.osvita.ua' + trs[tr].a['href'])
-        print(a_list)
-        #with open('text.csv', 'w') as csv_file:
-            #write = csv.writer(csv_file)
-            #write.writerow(['Название', 'что-то там'])
-        for page in a_list:
-                get_inner_info(page)
-                #write.writerow(heading_text)
-                #write.writerow(tables_text)
+        a_list = ['https://www.education.ua' + x['href'] for x in html_soup.findAll('a', class_=('viplink', 'h4_link'))]
+        get_inner_info
     else:
         print('error, not 200')
 
-url = "https://ru.osvita.ua/vnz/guide/"
+url = "https://www.education.ua/universities/?city=32"
 get_page(url)
