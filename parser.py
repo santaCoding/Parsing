@@ -1603,12 +1603,15 @@ dict = {
 }
 
 
+import csv
 
-with open('list.txt', 'w') as file:
+with open('icons_list.csv', 'w') as file:
+    writer = csv.writer(file)
     for title in dict.items():
-        print(title[0])
-        file.write(title[0] + ' ')
+        temp = []
+        temp.append(title[0])
         for data in range(len(title[1])):
             if data == 3:
-                print(title[1][data])
-                file.write(title[1][data] + '\n')
+                temp.append(title[1][data])
+                writer.writerow(temp)
+                temp.clear()
