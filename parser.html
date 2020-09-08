@@ -1,5 +1,526 @@
-<body class="min-vh-100 bg-gray0 gray7 ma0 overflow-x-hidden">
-<div id="vue-container"><div id="page-top" class="wrapper-view overflow-x-hidden"><nav class="nav-app-menu bg-gray9 white fixed top-0 bottom-0 overflow-y-auto br bw1 b--black-10 overflow-x-hidden"><div class="flex flex-row flex-nowrap items-stretch"><div class="pane pane-primary min-vh-100 w-100"><a href="/" title="Home" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-home fa-w-18 fa-fw fa-lg"><path fill="currentColor" d="M570.24 247.41L512 199.52V104a8 8 0 0 0-8-8h-32a8 8 0 0 0-7.95 7.88v56.22L323.87 45a56.06 56.06 0 0 0-71.74 0L5.76 247.41a16 16 0 0 0-2 22.54L14 282.25a16 16 0 0 0 22.53 2L64 261.69V448a32.09 32.09 0 0 0 32 32h128a32.09 32.09 0 0 0 32-32V344h64v104a32.09 32.09 0 0 0 32 32h128a32.07 32.07 0 0 0 32-31.76V261.67l27.53 22.62a16 16 0 0 0 22.53-2L572.29 270a16 16 0 0 0-2.05-22.59zM463.85 432H368V328a32.09 32.09 0 0 0-32-32h-96a32.09 32.09 0 0 0-32 32v104h-96V222.27L288 77.65l176 144.56z" class=""></path></svg> <span class="ml2 white">Home</span></a> <a href="/start" title="Start" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="rabbit-fast" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-rabbit-fast fa-w-20 fa-fw fa-lg"><path fill="currentColor" d="M598.33 189.44c-1.98-1.4.26.02-41.42-25.23-1.44-8.79-3.37-17.75-5.76-26.67C542.64 105.8 516.85 32 461.17 32c-5.01 0-9.99.65-14.8 1.95-18.5 4.96-31.84 17.01-39.68 34.91-8.84-3.03-17.89-4.86-26.88-4.86-16.51 0-31.68 6.07-42.71 17.1-5.7 5.7-14.96 17.64-16.74 36.22C292.78 103.85 266.77 96 239.89 96c-40.75 0-77.54 18.47-112.37 55.99-13.71-10.22-30.11-16-47.53-16-44.19 0-80 35.75-80 79.99 0 44.19 35.76 79.99 80 79.99 10.98 0 21.54-2.34 31.33-6.55 7.3 11.89 8.74 12.68 51.15 59.01l-9.54 5.16c-15.62 10.4-24.94 27.82-24.94 46.59v23.73c0 20.19 10.44 38.29 27.88 48.42 8.78 5.11 18.44 7.66 28.12 7.66 9.53 0 19.06-2.48 27.78-7.45l42.21-24.12 14.6 15.95a48.01 48.01 0 0 0 35.41 15.59h160c26.51 0 48-21.49 48-48 0-26.14-12.6-49.39-32.05-64h61.07c54.58 0 98.98-44.12 98.98-98.35.01-31.78-15.57-61.76-41.66-80.17zM95.87 243.1c-19.31 11.27-34.01.01-38.5-4.48-12.5-12.5-12.5-32.76 0-45.25 6.69-6.7 26.57-16.99 44.22-.69-5.94 16.23-7.56 33.47-5.72 50.42zm92.1 187.76c-3.5 2.02-6.5.81-8-.02-1.47-.88-3.97-2.92-3.97-6.92v-23.73c0-2.69 1.34-5.17 1.62-5.5l18.2-9.81 24.94 27.24-32.79 18.74zm353.05-110.88H448l-48.06 20.03c-.35-48.13-31.81-90.94-76.81-104.27l-36.31-10.77c-12.81-3.75-26.06 3.5-29.81 16.19-3.78 12.72 3.47 26.08 16.19 29.84l36.31 10.76c25.03 7.41 42.5 31.69 42.5 59.03v59.18h80c17.66 0 32 14.36 32 32H304L159.86 274.5c-22.36-24.22-22.66-61.37-.81-86.05C186.71 157.21 212.34 144 239.9 144c52.91 0 112.95 48.69 208.11 111.99 0-18.85-.38-22.24 3.75-33.12-13.16-6.88-28.53-18.32-43.38-33.17-30.93-30.92-47.64-64.35-37.33-74.65 10.74-10.74 45.13 7.8 74.66 37.32 2.58 2.58 4.9 5.18 7.28 7.78-10.27-40.77-7.88-76.17 5.81-79.84 14.11-3.8 34.71 27.54 45.99 69.65 4.37 16.3 6.67 31.8 7.1 44.98 2.6.84 5.2 1.56 7.79 2.82l50.98 30.89c13.4 9.45 21.35 24.71 21.35 40.97-.01 27.82-22.84 50.36-50.99 50.36zM512 239.99c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16z" class=""></path></svg> <span class="ml2 white">Start</span></a> <a href="/icons" title="Icons" class="link db pv3 ph4 color-inherit bg-black"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="shapes" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-shapes fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M480 288H320c-17.67 0-32 14.33-32 32v160c0 17.67 14.33 32 32 32h160c17.67 0 32-14.33 32-32V320c0-17.67-14.33-32-32-32zm-16 176H336V336h128v128zM128 256C57.31 256 0 313.31 0 384s57.31 128 128 128 128-57.31 128-128-57.31-128-128-128zm0 208c-44.11 0-80-35.89-80-80s35.89-80 80-80 80 35.89 80 80-35.89 80-80 80zm378.98-262.86L400.07 18.29C392.95 6.1 380.47 0 368 0s-24.95 6.1-32.07 18.29L229.02 201.14c-14.26 24.38 3.56 54.86 32.07 54.86h213.82c28.51 0 46.33-30.48 32.07-54.86zM280.61 208L368 58.53 455.39 208H280.61z" class=""></path></svg> <span class="ml2 white">Icons</span></a> <a href="/how-to-use/on-the-web/referencing-icons" title="Docs for Web" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="browser" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-browser fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM48 92c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v24c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V92zm416 334c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V168h416v258zm0-310c0 6.6-5.4 12-12 12H172c-6.6 0-12-5.4-12-12V92c0-6.6 5.4-12 12-12h280c6.6 0 12 5.4 12 12v24z" class=""></path></svg> <span class="ml2 white">Docs for Web</span></a> <a href="/how-to-use/on-the-desktop/setup" title="Docs for Desktop" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="desktop-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-desktop-alt fa-w-18 fa-fw fa-lg"><path fill="currentColor" d="M528 0H48C21.5 0 0 21.5 0 48v288c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM48 54c0-3.3 2.7-6 6-6h468c3.3 0 6 2.7 6 6v234H48V54zm432 434c0 13.3-10.7 24-24 24H120c-13.3 0-24-10.7-24-24s10.7-24 24-24h98.7l18.6-55.8c1.6-4.9 6.2-8.2 11.4-8.2h78.7c5.2 0 9.8 3.3 11.4 8.2l18.6 55.8H456c13.3 0 24 10.7 24 24z" class=""></path></svg> <span class="ml2 white">Docs for Desktop</span></a> <a href="/plans" title="Plans" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bicycle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-bicycle fa-w-20 fa-fw fa-lg"><path fill="currentColor" d="M512.509 192.001c-16.373-.064-32.03 2.955-46.436 8.495l-77.68-125.153A24 24 0 0 0 368.001 64h-64c-8.837 0-16 7.163-16 16v16c0 8.837 7.163 16 16 16h50.649l14.896 24H256.002v-16c0-8.837-7.163-16-16-16h-87.459c-13.441 0-24.777 10.999-24.536 24.437.232 13.044 10.876 23.563 23.995 23.563h48.726l-29.417 47.52c-13.433-4.83-27.904-7.483-42.992-7.52C58.094 191.83.412 249.012.002 319.236-.413 390.279 57.055 448 128.002 448c59.642 0 109.758-40.793 123.967-96h52.033a24 24 0 0 0 20.406-11.367L410.37 201.77l14.938 24.067c-25.455 23.448-41.385 57.081-41.307 94.437.145 68.833 57.899 127.051 126.729 127.719 70.606.685 128.181-55.803 129.255-125.996 1.086-70.941-56.526-129.72-127.476-129.996zM186.75 265.772c9.727 10.529 16.673 23.661 19.642 38.228h-43.306l23.664-38.228zM128.002 400c-44.112 0-80-35.888-80-80s35.888-80 80-80c5.869 0 11.586.653 17.099 1.859l-45.505 73.509C89.715 331.327 101.213 352 120.002 352h81.3c-12.37 28.225-40.562 48-73.3 48zm162.63-96h-35.624c-3.96-31.756-19.556-59.894-42.383-80.026L237.371 184h127.547l-74.286 120zm217.057 95.886c-41.036-2.165-74.049-35.692-75.627-76.755-.812-21.121 6.633-40.518 19.335-55.263l44.433 71.586c4.66 7.508 14.524 9.816 22.032 5.156l13.594-8.437c7.508-4.66 9.817-14.524 5.156-22.032l-44.468-71.643a79.901 79.901 0 0 1 19.858-2.497c44.112 0 80 35.888 80 80-.001 45.54-38.252 82.316-84.313 79.885z" class=""></path></svg> <span class="ml2 white">Plans</span></a> <a href="https://blog.fontawesome.com/" title="Blog" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="typewriter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-typewriter fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M480 192h-32V77.25a32 32 0 0 0-9.38-22.63L393.38 9.38A32 32 0 0 0 370.75 0H96a32 32 0 0 0-32 32v160H32a32 32 0 0 0-32 32v32a32 32 0 0 0 32 32v160a64 64 0 0 0 64 64h320a64 64 0 0 0 64-64V288a32 32 0 0 0 32-32v-32a32 32 0 0 0-32-32zM112 48h240v32a16 16 0 0 0 16 16h32v96h-34.75a32 32 0 0 0-22.62 9.37l-13.26 13.26a32 32 0 0 1-22.62 9.37h-101.5a32 32 0 0 1-22.62-9.37l-13.26-13.26a32 32 0 0 0-22.62-9.37H112zm320 400a16 16 0 0 1-16 16H96a16 16 0 0 1-16-16V288h352zm-288-16h224a16 16 0 0 0 16-16v-16a16 16 0 0 0-16-16H144a16 16 0 0 0-16 16v16a16 16 0 0 0 16 16zm-8-76h24a8 8 0 0 0 8-8v-24a8 8 0 0 0-8-8h-24a8 8 0 0 0-8 8v24a8 8 0 0 0 8 8zm216 0h24a8 8 0 0 0 8-8v-24a8 8 0 0 0-8-8h-24a8 8 0 0 0-8 8v24a8 8 0 0 0 8 8zm-144 0h24a8 8 0 0 0 8-8v-24a8 8 0 0 0-8-8h-24a8 8 0 0 0-8 8v24a8 8 0 0 0 8 8zm72 0h24a8 8 0 0 0 8-8v-24a8 8 0 0 0-8-8h-24a8 8 0 0 0-8 8v24a8 8 0 0 0 8 8z" class=""></path></svg> <span class="ml2 white">Blog</span></a> <a href="/support" title="Support" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="headset" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-headset fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M192 208c0-17.67-14.33-32-32-32h-16c-35.35 0-64 28.65-64 64v48c0 35.35 28.65 64 64 64h16c17.67 0 32-14.33 32-32V208zm176 144c35.35 0 64-28.65 64-64v-48c0-35.35-28.65-64-64-64h-16c-17.67 0-32 14.33-32 32v112c0 17.67 14.33 32 32 32h16zM256 0C113.18 0 4.58 118.83 0 256v16c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-16c0-114.69 93.31-208 208-208s208 93.31 208 208h-.12c.08 2.43.12 165.72.12 165.72 0 23.35-18.93 42.28-42.28 42.28H320c0-26.51-21.49-48-48-48h-32c-26.51 0-48 21.49-48 48s21.49 48 48 48h181.72c49.86 0 90.28-40.42 90.28-90.28V256C507.42 118.83 398.82 0 256 0z" class=""></path></svg> <span class="ml2 white">Support</span></a> <a href="/sessions/sign-in" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2" title="Sign In"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="sign-in-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-sign-in-alt fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M144 112v51.6H48c-26.5 0-48 21.5-48 48v88.6c0 26.5 21.5 48 48 48h96v51.6c0 42.6 51.7 64.2 81.9 33.9l144-143.9c18.7-18.7 18.7-49.1 0-67.9l-144-144C195.8 48 144 69.3 144 112zm192 144L192 400v-99.7H48v-88.6h144V112l144 144zm80 192h-84c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h84c26.5 0 48-21.5 48-48V160c0-26.5-21.5-48-48-48h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96z" class=""></path></svg> <span class="ml2 white">Sign In</span></a></div></div> <!----></nav> <div class="nav-account-menu bg-gray9 white fixed top-0 bottom-0 overflow-y-auto br bw1 b--black-10 overflow-x-hidden"><div class="pa4 tc relative"><div class="relative z-1"><div class="mb3 teal4"><!----> <!----> <!----> <!----> <!----> <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="user-tie" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-user-tie fa-w-14 fa-fw fa-2x"><g class="fa-group"><path fill="currentColor" d="M191.35 414.77L208 344l-32-56h96l-32 56 16.65 70.77L224 480zM224 256A128 128 0 1 0 96 128a128 128 0 0 0 128 128z" class="fa-secondary"></path><path fill="currentColor" d="M319.8 288.6L224 480l-95.8-191.4C56.9 292 0 350.3 0 422.4V464a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z" class="fa-primary"></path></g></svg> <!----></div> <h2 class="mv0 f3 normal flex flex-column items-center"><span class="sr-only">You're signed in as </span> <!----> <span class="fw6"></span></h2></div> <span class="absolute absolute--fill z-0 bg-teal5 o-20"></span></div> <nav><a href="/account" class="link gray7 db pv3 ph4 hover-bg-teal5 hover-teal2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="address-card" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-address-card fa-w-18 fa-fw fa-lg"><path fill="currentColor" d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 400H48V80h480v352zM208 256c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2zM360 320h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8z" class=""></path></svg> <span class="ml2 white">Account Details</span></a> <!----> <a href="/account/cdn" class="link gray7 db pv3 ph4 hover-bg-teal5 hover-teal2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="globe" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg-inline--fa fa-globe fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm179.3 160h-67.2c-6.7-36.5-17.5-68.8-31.2-94.7 42.9 19 77.7 52.7 98.4 94.7zM248 56c18.6 0 48.6 41.2 63.2 112H184.8C199.4 97.2 229.4 56 248 56zM48 256c0-13.7 1.4-27.1 4-40h77.7c-1 13.1-1.7 26.3-1.7 40s.7 26.9 1.7 40H52c-2.6-12.9-4-26.3-4-40zm20.7 88h67.2c6.7 36.5 17.5 68.8 31.2 94.7-42.9-19-77.7-52.7-98.4-94.7zm67.2-176H68.7c20.7-42 55.5-75.7 98.4-94.7-13.7 25.9-24.5 58.2-31.2 94.7zM248 456c-18.6 0-48.6-41.2-63.2-112h126.5c-14.7 70.8-44.7 112-63.3 112zm70.1-160H177.9c-1.1-12.8-1.9-26-1.9-40s.8-27.2 1.9-40h140.3c1.1 12.8 1.9 26 1.9 40s-.9 27.2-2 40zm10.8 142.7c13.7-25.9 24.4-58.2 31.2-94.7h67.2c-20.7 42-55.5 75.7-98.4 94.7zM366.3 296c1-13.1 1.7-26.3 1.7-40s-.7-26.9-1.7-40H444c2.6 12.9 4 26.3 4 40s-1.4 27.1-4 40h-77.7z" class=""></path></svg> <span class="ml2 white">Font Awesome CDN</span></a> <a href="/download" class="link gray7 db pv3 ph4 hover-bg-teal5 hover-teal2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-download fa-w-18 fa-fw fa-lg"><path fill="currentColor" d="M528 288h-92.1l46.1-46.1c30.1-30.1 8.8-81.9-33.9-81.9h-64V48c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v112h-64c-42.6 0-64.2 51.7-33.9 81.9l46.1 46.1H48c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V336c0-26.5-21.5-48-48-48zm-400-80h112V48h96v160h112L288 368 128 208zm400 256H48V336h140.1l65.9 65.9c18.8 18.8 49.1 18.7 67.9 0l65.9-65.9H528v128zm-88-64c0-13.3 10.7-24 24-24s24 10.7 24 24-10.7 24-24 24-24-10.7-24-24z" class=""></path></svg> <span class="ml2 white">Download</span></a> <a href="mailto:hello@fontawesome.com?subject=I need help, Font Awesome!" exact-active-class="bg-black" class="link gray7 db pv3 ph4 hover-bg-teal5 hover-teal2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="headset" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-headset fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M224 336V192.36c0-17.67-14.33-32-32-32h-48c-35.35 0-64 28.65-64 64V304c0 35.35 28.65 64 64 64h48c17.67 0 32-14.33 32-32zm-48-16h-32c-8.82 0-16-7.18-16-16v-79.64c0-8.82 7.18-16 16-16h32V320zM256 0C113.18 0 4.58 118.83 0 256v16c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-16c0-114.69 93.31-208 208-208s208 93.31 208 208h-.12c.08 2.43.12 165.72.12 165.72 0 23.35-18.93 42.28-42.28 42.28H320c0-26.51-21.49-48-48-48h-32c-26.51 0-48 21.49-48 48s21.49 48 48 48h181.72c49.86 0 90.28-40.42 90.28-90.28V256C507.42 118.83 398.82 0 256 0zm112 368c35.35 0 64-28.65 64-64v-79.64c0-35.35-28.65-64-64-64h-48c-17.67 0-32 14.33-32 32V336c0 17.67 14.33 32 32 32h48zm-32-159.64h32c8.82 0 16 7.18 16 16V304c0 8.82-7.18 16-16 16h-32V208.36z" class=""></path></svg> <span class="ml2 white">Support</span></a> <button class="button-reset w-100 tl link gray7 db pv3 ph4 hover-bg-teal5 hover-teal2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="sign-out-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-sign-out-alt fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M272 112v51.6h-96c-26.5 0-48 21.5-48 48v88.6c0 26.5 21.5 48 48 48h96v51.6c0 42.6 51.7 64.2 81.9 33.9l144-143.9c18.7-18.7 18.7-49.1 0-67.9l-144-144C323.8 48 272 69.3 272 112zm192 144L320 400v-99.7H176v-88.6h144V112l144 144zM96 64h84c6.6 0 12 5.4 12 12v24c0 6.6-5.4 12-12 12H96c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h84c6.6 0 12 5.4 12 12v24c0 6.6-5.4 12-12 12H96c-53 0-96-43-96-96V160c0-53 43-96 96-96z" class=""></path></svg> <span class="ml2 white">Sign Out</span></button></nav></div> <div class="view flex flex-column min-vh-100 db-pr"><div class="dn-pr flex-none w-100 relative z-5"><!----> <!----> <!----> <!----> <!----></div> <header class="header-app dn-pr flex-none w-100 ph4 ph6-ns pv4 z-5 bg-white shadow-2"><div class="mw9 center flex flex-row flex-nowrap items-center justify-between relative"><button type="button" class="db dn-l button-reset tl color-inherit o-60 glow outline-0-focus toggle-app-menu"><span title="Open Main Navigation" class="relative"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="o-0 svg-inline--fa fa-square fa-w-14 fa-fw fa-lg"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z" class=""></path></svg> <span class="app-menu-icon-initial absolute center-a"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bars fa-w-14 fa-fw fa-lg"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class=""></path></svg></span> <span class="app-menu-icon-focus absolute center-a"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="cheeseburger" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cheeseburger fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M352 176a16 16 0 1 0-16-16 16 16 0 0 0 16 16zm-96-32a16 16 0 1 0-16-16 16 16 0 0 0 16 16zm-96 32a16 16 0 1 0-16-16 16 16 0 0 0 16 16zm352 112a79.33 79.33 0 0 0-28.1-60.4 8.78 8.78 0 0 0 1.2-1.5 72.49 72.49 0 0 0 .6-75.4C442.3 78.7 352.19 32.1 256 32c-96.1.1-186.31 46.7-229.71 118.7a72.45 72.45 0 0 0 .6 75.4 15.76 15.76 0 0 0 1.2 1.5 79.35 79.35 0 0 0-9.3 111.8 78.09 78.09 0 0 0 15 13.7c-.7 2.8-1.7 5.5-1.7 8.5v34.7a83.73 83.73 0 0 0 83.7 83.7h280.6a83.8 83.8 0 0 0 83.71-83.7v-34.7c0-3-1.1-5.7-1.7-8.5A80 80 0 0 0 512 288zM67.37 175.5c34.9-57.9 109-95.4 188.61-95.5 79.71.1 153.81 37.6 188.72 95.5a24.51 24.51 0 0 1-.2 25.2c-2.9 4.7-7.41 7.4-12.21 7.4H79.67c-4.8 0-9.3-2.7-12.2-7.4a24.73 24.73 0 0 1-.1-25.2zM432 396.3a35.72 35.72 0 0 1-35.7 35.7H115.67A35.72 35.72 0 0 1 80 396.3v-25.6h352zm0-76.3H80a32 32 0 0 1 0-64h144l96 48 96-48h16a32 32 0 1 1 0 64z" class=""></path></svg></span></span></button> <div class="mr5-l pr5-l flex flex-row flex-nowrap items-center"><h1 class="ma0 mr5-l mr6-xl"><a href="/" class="router-link-active flex flex-row flex-nowrap items-center justify-center link color-inherit router-link-active hover-primary4 pt1-l outline-0-focus relative top--025-l hover-blue5"><span class="fa-layers fa-fw white fa-lg"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-square fa-w-14 fa-fw primary5"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z" class=""></path></svg> <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="font-awesome-flag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="color-inherit svg-inline--fa fa-font-awesome-flag fa-w-14 fa-fw" style="transform-origin: 0.4375em 0.5em;"><g transform="translate(224 256)" class=""><g transform="translate(0, 0)  scale(0.5625, 0.5625)  rotate(0 0 0)" class=""><path fill="currentColor" d="M444.373 359.424c0 7.168-6.144 10.24-13.312 13.312-28.672 12.288-59.392 23.552-92.16 23.552-46.08 0-67.584-28.672-122.88-28.672-39.936 0-81.92 14.336-115.712 29.696-2.048 1.024-4.096 1.024-6.144 2.048v77.824c0 21.405-16.122 34.816-33.792 34.816-19.456 0-34.816-15.36-34.816-34.816V102.4C12.245 92.16 3.029 75.776 3.029 57.344 3.029 25.6 28.629 0 60.373 0s57.344 25.6 57.344 57.344c0 18.432-8.192 34.816-22.528 45.056v31.744c4.124-1.374 58.768-28.672 114.688-28.672 65.27 0 97.676 27.648 126.976 27.648 38.912 0 81.92-27.648 92.16-27.648 8.192 0 15.36 6.144 15.36 13.312v240.64z" transform="translate(-224 -256)" class=""></path></g></g></svg></span> <span class="dn db-ns dn-l db-xl b f5 mt1 tracked0 ml1 nowrap">Font Awesome</span></a></h1> <div class="dn db-l mr5-l mr6-xl"><form method="post" name="header_search"><label for="header_search_query" class="sr-only">Search Icons:</label> <div class="relative"><input id="header_search_query" type="search" name="header_search_query" value="" placeholder="Search icons..." class="input-reset color-inherit input-focus all-animate br-pill ph4 sans-serif header-search-input ba bw1 bg-gray1 b--gray1"> <button type="submit" name="header_search_submit" class="button-reset color-inherit db o-60 absolute center-v right-1 hover-primary6"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16 fa-fw"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path></svg> <span class="sr-only">Search!</span></button></div> <button type="submit" name="header_search_submit" class="sr-only">Search!</button></form></div> <div><nav class="dn flex-l nr5-l flex-row flex-nowrap items-center nav-app"><a href="/start" class="link color-inherit fw6 mr5 o-60 glow">Start</a> <a href="/icons" class="router-link-active link color-inherit fw6 mr5">Icons</a> <a href="/how-to-use/on-the-web/referencing-icons/basic-use" class="link color-inherit fw6 mr5 o-60 glow">Docs</a> <a href="/support" class="link color-inherit fw6 mr5 o-60 glow">Support</a> <a href="/plans" class="link color-inherit fw6 mr5 o-60 glow">Plans</a> <a href="https://blog.fontawesome.com/" class="link color-inherit fw6 mr5 o-60 glow">Blog</a></nav></div></div> <a href="/sessions/sign-in" class="link color-inherit fw6 o-60 glow pointer" data-balloon="Sign In" data-balloon-pos="left"><span class="dn dib-2x v-mid mr1">Sign In</span> <svg aria-labelledby="svg-inline--fa-title-JU6P5WiBU4BR" data-prefix="far" data-icon="sign-in-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-sign-in-alt fa-w-16 fa-fw fa-lg"><title id="svg-inline--fa-title-JU6P5WiBU4BR" class="">Sign In</title><path fill="currentColor" d="M144 112v51.6H48c-26.5 0-48 21.5-48 48v88.6c0 26.5 21.5 48 48 48h96v51.6c0 42.6 51.7 64.2 81.9 33.9l144-143.9c18.7-18.7 18.7-49.1 0-67.9l-144-144C195.8 48 144 69.3 144 112zm192 144L192 400v-99.7H48v-88.6h144V112l144 144zm80 192h-84c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h84c26.5 0 48-21.5 48-48V160c0-26.5-21.5-48-48-48h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96z" class=""></path></svg></a></div></header> <div class="bg-fa-navy bt bb bw3 b--black-05 fa-white ph5 ph6-ns pv2"><div class="mw9 center relative"><div class="flex flex-column flex-row-l items-center-l pv5 nr5 nb4"><div class="dn db-l pr5 pb4"><a href="/6" class="db link color-inherit relative" style="transition: none;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-dk-navy svg-inline--fa fa-square fa-w-14 fa-6x"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z" class=""></path></svg> <span class="absolute center-a"><svg aria-hidden="true" focusable="false" data-prefix="fac" data-icon="fa6-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363 512" class="fa-yellow svg-inline--fa fa-fa6-6 fa-w-12 fa-6x" style="transform-origin: 0.3544921875em 0.5em;"><g transform="translate(181.5 256)" class=""><g transform="translate(0, 0)  scale(0.5, 0.5)  rotate(0 0 0)" class=""><path fill="currentColor" d="M208.094 167.673C251.01 170.168 287.439 187.634 317.38 220.07C347.821 252.507 363.041 290.932 363.041 335.345C363.041 384.25 345.326 425.918 309.895 460.351C274.963 494.784 232.296 512 181.895 512C130.994 512 87.8285 494.784 52.3977 460.351C17.4659 425.918 0 384 0 334.596C0 307.15 6.48733 280.203 19.462 253.754C32.9357 227.306 55.1423 196.366 86.0819 160.936L200.608 25.4503C216.078 8.48344 231.298 0 246.269 0C260.242 0 271.969 4.74074 281.45 14.2222C291.431 23.2047 296.421 34.1832 296.421 47.1579C296.421 59.1345 291.431 70.6121 281.45 81.5907L208.094 167.673ZM123.509 395.228C139.478 411.197 158.94 419.181 181.895 419.181C204.85 419.181 224.062 411.197 239.532 395.228C255.501 378.76 263.485 358.799 263.485 335.345C263.485 311.891 255.501 292.179 239.532 276.211C224.062 260.242 204.85 252.257 181.895 252.257C158.94 252.257 139.478 260.242 123.509 276.211C108.039 292.179 100.304 311.891 100.304 335.345C100.304 358.799 108.039 378.76 123.509 395.228Z" transform="translate(-181.5 -256)" class=""></path></g></g></svg></span></a></div> <div class="pr5 pb4 flex-grow-1-l"><h2 class="f5 mt0 mb1 lh-title fw6 flex items-center"><a href="/6" class="dn-l f4 link color-inherit relative mr3" style="transition: none;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-dk-navy svg-inline--fa fa-square fa-w-14 fa-4x"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z" class=""></path></svg> <span class="absolute center-a"><svg aria-hidden="true" focusable="false" data-prefix="fac" data-icon="fa6-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363 512" class="fa-yellow svg-inline--fa fa-fa6-6 fa-w-12 fa-4x" style="transform-origin: 0.3544921875em 0.5em;"><g transform="translate(181.5 256)" class=""><g transform="translate(0, 0)  scale(0.5, 0.5)  rotate(0 0 0)" class=""><path fill="currentColor" d="M208.094 167.673C251.01 170.168 287.439 187.634 317.38 220.07C347.821 252.507 363.041 290.932 363.041 335.345C363.041 384.25 345.326 425.918 309.895 460.351C274.963 494.784 232.296 512 181.895 512C130.994 512 87.8285 494.784 52.3977 460.351C17.4659 425.918 0 384 0 334.596C0 307.15 6.48733 280.203 19.462 253.754C32.9357 227.306 55.1423 196.366 86.0819 160.936L200.608 25.4503C216.078 8.48344 231.298 0 246.269 0C260.242 0 271.969 4.74074 281.45 14.2222C291.431 23.2047 296.421 34.1832 296.421 47.1579C296.421 59.1345 291.431 70.6121 281.45 81.5907L208.094 167.673ZM123.509 395.228C139.478 411.197 158.94 419.181 181.895 419.181C204.85 419.181 224.062 411.197 239.532 395.228C255.501 378.76 263.485 358.799 263.485 335.345C263.485 311.891 255.501 292.179 239.532 276.211C224.062 260.242 204.85 252.257 181.895 252.257C158.94 252.257 139.478 260.242 123.509 276.211C108.039 292.179 100.304 311.891 100.304 335.345C100.304 358.799 108.039 378.76 123.509 395.228Z" transform="translate(-181.5 -256)" class=""></path></g></g></svg></span></a> <span class="db">
+<html lang="en" class="fa5-events-icons-ready fa5-events-typefaces-fa5-proxima-nova-ready fa5-events-typefaces-fa5-proxima-nova-normal-normal-ready fa5-events-typefaces-fa5-proxima-nova-600-normal-ready fa5-events-typefaces-fa5-proxima-nova-bold-normal-ready fa5-events-typefaces-fa5-proxima-nova-normal-italic-ready"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="KAweKB02YxYlOEAZMAsdO0kxUwB-HDUEjiIiodUoouxI_LMNxUetHCPs">
+
+<style type="text/css">svg:not(:root).svg-inline--fa {
+  overflow: visible;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.225em;
+}
+.svg-inline--fa.fa-w-1 {
+  width: 0.0625em;
+}
+.svg-inline--fa.fa-w-2 {
+  width: 0.125em;
+}
+.svg-inline--fa.fa-w-3 {
+  width: 0.1875em;
+}
+.svg-inline--fa.fa-w-4 {
+  width: 0.25em;
+}
+.svg-inline--fa.fa-w-5 {
+  width: 0.3125em;
+}
+.svg-inline--fa.fa-w-6 {
+  width: 0.375em;
+}
+.svg-inline--fa.fa-w-7 {
+  width: 0.4375em;
+}
+.svg-inline--fa.fa-w-8 {
+  width: 0.5em;
+}
+.svg-inline--fa.fa-w-9 {
+  width: 0.5625em;
+}
+.svg-inline--fa.fa-w-10 {
+  width: 0.625em;
+}
+.svg-inline--fa.fa-w-11 {
+  width: 0.6875em;
+}
+.svg-inline--fa.fa-w-12 {
+  width: 0.75em;
+}
+.svg-inline--fa.fa-w-13 {
+  width: 0.8125em;
+}
+.svg-inline--fa.fa-w-14 {
+  width: 0.875em;
+}
+.svg-inline--fa.fa-w-15 {
+  width: 0.9375em;
+}
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+}
+.svg-inline--fa.fa-w-17 {
+  width: 1.0625em;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+.svg-inline--fa.fa-w-19 {
+  width: 1.1875em;
+}
+.svg-inline--fa.fa-w-20 {
+  width: 1.25em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-border {
+  height: 1.5em;
+}
+.svg-inline--fa.fa-li {
+  width: 2em;
+}
+.svg-inline--fa.fa-fw {
+  width: 1.25em;
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: #ff253a;
+  border-radius: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1;
+  max-width: 5em;
+  min-width: 1.5em;
+  overflow: hidden;
+  padding: 0.25em;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+.far.fa-pull-left,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: 0.3em;
+}
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+.far.fa-pull-right,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: 0.3em;
+}
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
+:root .fa-flip-both {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: 0.4;
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: 0.4;
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse {
+  color: #fff;
+}</style><link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Free Icons | Font Awesome</title>
+<meta name="application-name" content="Font Awesome">
+<meta name="description" content="The world’s most popular and easiest to use icon set just got an upgrade. More icons. More styles. More Options.">
+<meta name="keywords" content="icons, vector icons, svg icons, free icons, icon font, webfont, desktop icons, svg, font awesome, font awesome free, font awesome pro">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Font Awesome">
+<meta itemprop="description" content="The world’s most popular and easiest to use icon set just got an upgrade. More icons. More styles. More Options.">
+<meta itemprop="image" content="https://fontawesome.com/images/open-graph.png">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@fontawesome">
+<meta name="twitter:title" content="Font Awesome">
+<meta name="twitter:description" content="The world’s most popular and easiest to use icon set just got an upgrade. More icons. More styles. More Options.">
+<meta name="twitter:creator" content="@fontawesome">
+<meta name="twitter:image" content="https://fontawesome.com/images/open-graph.png">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Font Awesome">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fontawesome.com">
+<meta property="og:image" content="https://fontawesome.com/images/open-graph.png">
+<meta property="og:description" content="The world’s most popular and easiest to use icon set just got an upgrade. More icons. More styles. More Options.">
+
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Default" href="/css/app-54bdae4b271412cc5d8745333b46414d.css?vsn=d">
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" disabled="" href="/css/app-wa-ad0c9322cf0660425b463119494b0b22.css?vsn=d">
+
+<script type="text/javascript" src="https://beacon-v2.helpscout.net/static/js/main.b07d8963.js"></script><script type="text/javascript" src="https://beacon-v2.helpscout.net/static/js/vendor.e75a407f.js"></script><script type="text/javascript" async="" src="https://beacon-v2.helpscout.net"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/NjbyeWjjFy97MXGZ40KrXu3v/recaptcha__ru.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-30136587-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-30136587-4', { cookie_flags: 'max-age=7200;secure;samesite=none' });
+</script>
+
+
+    <script defer="" src="/js/settings-defd025993734757d0aeb7e0b8741c04.js?vsn=d"></script>
+    <script defer="" src="/js/app-8ce7a9d8335307a4a8c97b6c936927a7.js?vsn=d"></script>
+
+<script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+<script type="text/javascript">
+  window.Beacon('init', '8b4d2c82-4277-4380-9212-e4e7f03c1ea4');
+  window.Beacon('config', {display: {style: 'manual'}})
+</script>  <script charset="utf-8" src="/js/17.761513a4d3c5adcadf32.js"></script><style data-emotion="fcy"></style><style id="beacon-stylesheet" type="text/css">#beacon-container{--BlueConfigGlobalFontFamilyMono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5}#beacon-container,#beacon-container *{-webkit-box-sizing:border-box;box-sizing:border-box}#beacon-container *{-webkit-tap-highlight-color:rgba(0,0,0,0)}#BeaconContainer-root.is-mobile{--BlueConfigGlobalFontSize:14px}@media (min-width:330px){#BeaconContainer-root.is-mobile{--BlueConfigGlobalFontSize:15px}}@media (min-width:410px){#BeaconContainer-root.is-mobile{--BlueConfigGlobalFontSize:16px}}#BeaconContainer-root.is-mobile input,#BeaconContainer-root.is-mobile select,#BeaconContainer-root.is-mobile textarea{font-size:16px!important}#beacon-container a{color:_color(link,base);text-decoration:none}#beacon-container a:hover{color:_color(link,hover)}#beacon-container a.disabled{color:_color(text,muted);cursor:not-allowed}#beacon-container a.disabled:hover{color:_color(text,muted);text-decoration:none}#beacon-container-body{margin:0;overflow:hidden}</style><meta name="application-name" content="Font Awesome Free Icons"><meta name="description" content="All of the Free and Pro icons available in Font Awesome 5"><meta name="keywords" content="icons, vector icons, svg icons, free icons, icon font, webfont, desktop icons, svg, font awesome, font awesome free, font awesome pro"><meta name="twitter:title" content="Font Awesome Free Icons"><meta name="twitter:description" content="All of the Free and Pro icons available in Font Awesome 5"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@fontawesome"><meta itemprop="name" content="Font Awesome Free Icons"><meta itemprop="description" content="All of the Free and Pro icons available in Font Awesome 5"><meta property="og:url" content="https://fontawesome.com/icons?d=gallery&amp;m=free"><meta property="og:title" content="Font Awesome Free Icons"><meta property="og:type" content="website"><meta property="og:description" content="All of the Free and Pro icons available in Font Awesome 5"><meta property="og:image" content="https://fontawesome.com/images/open-graph.png"><link rel="canonical" href="https://fontawesome.com/icons?d=gallery&amp;m=free"></head>
+  <body class="min-vh-100 bg-gray0 gray7 ma0 overflow-x-hidden">
+<div id="vue-container"><div id="page-top" class="wrapper-view overflow-x-hidden"><nav class="nav-app-menu bg-gray9 white fixed top-0 bottom-0 overflow-y-auto br bw1 b--black-10 overflow-x-hidden"><div class="flex flex-row flex-nowrap items-stretch"><div class="pane pane-primary min-vh-100 w-100"><a href="/" title="Home" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-home fa-w-18 fa-fw fa-lg"><path fill="currentColor" d="M570.24 247.41L512 199.52V104a8 8 0 0 0-8-8h-32a8 8 0 0 0-7.95 7.88v56.22L323.87 45a56.06 56.06 0 0 0-71.74 0L5.76 247.41a16 16 0 0 0-2 22.54L14 282.25a16 16 0 0 0 22.53 2L64 261.69V448a32.09 32.09 0 0 0 32 32h128a32.09 32.09 0 0 0 32-32V344h64v104a32.09 32.09 0 0 0 32 32h128a32.07 32.07 0 0 0 32-31.76V261.67l27.53 22.62a16 16 0 0 0 22.53-2L572.29 270a16 16 0 0 0-2.05-22.59zM463.85 432H368V328a32.09 32.09 0 0 0-32-32h-96a32.09 32.09 0 0 0-32 32v104h-96V222.27L288 77.65l176 144.56z" class=""></path></svg> <span class="ml2 white">Home</span></a> <a href="/start" title="Start" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="rabbit-fast" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-rabbit-fast fa-w-20 fa-fw fa-lg"><path fill="currentColor" d="M598.33 189.44c-1.98-1.4.26.02-41.42-25.23-1.44-8.79-3.37-17.75-5.76-26.67C542.64 105.8 516.85 32 461.17 32c-5.01 0-9.99.65-14.8 1.95-18.5 4.96-31.84 17.01-39.68 34.91-8.84-3.03-17.89-4.86-26.88-4.86-16.51 0-31.68 6.07-42.71 17.1-5.7 5.7-14.96 17.64-16.74 36.22C292.78 103.85 266.77 96 239.89 96c-40.75 0-77.54 18.47-112.37 55.99-13.71-10.22-30.11-16-47.53-16-44.19 0-80 35.75-80 79.99 0 44.19 35.76 79.99 80 79.99 10.98 0 21.54-2.34 31.33-6.55 7.3 11.89 8.74 12.68 51.15 59.01l-9.54 5.16c-15.62 10.4-24.94 27.82-24.94 46.59v23.73c0 20.19 10.44 38.29 27.88 48.42 8.78 5.11 18.44 7.66 28.12 7.66 9.53 0 19.06-2.48 27.78-7.45l42.21-24.12 14.6 15.95a48.01 48.01 0 0 0 35.41 15.59h160c26.51 0 48-21.49 48-48 0-26.14-12.6-49.39-32.05-64h61.07c54.58 0 98.98-44.12 98.98-98.35.01-31.78-15.57-61.76-41.66-80.17zM95.87 243.1c-19.31 11.27-34.01.01-38.5-4.48-12.5-12.5-12.5-32.76 0-45.25 6.69-6.7 26.57-16.99 44.22-.69-5.94 16.23-7.56 33.47-5.72 50.42zm92.1 187.76c-3.5 2.02-6.5.81-8-.02-1.47-.88-3.97-2.92-3.97-6.92v-23.73c0-2.69 1.34-5.17 1.62-5.5l18.2-9.81 24.94 27.24-32.79 18.74zm353.05-110.88H448l-48.06 20.03c-.35-48.13-31.81-90.94-76.81-104.27l-36.31-10.77c-12.81-3.75-26.06 3.5-29.81 16.19-3.78 12.72 3.47 26.08 16.19 29.84l36.31 10.76c25.03 7.41 42.5 31.69 42.5 59.03v59.18h80c17.66 0 32 14.36 32 32H304L159.86 274.5c-22.36-24.22-22.66-61.37-.81-86.05C186.71 157.21 212.34 144 239.9 144c52.91 0 112.95 48.69 208.11 111.99 0-18.85-.38-22.24 3.75-33.12-13.16-6.88-28.53-18.32-43.38-33.17-30.93-30.92-47.64-64.35-37.33-74.65 10.74-10.74 45.13 7.8 74.66 37.32 2.58 2.58 4.9 5.18 7.28 7.78-10.27-40.77-7.88-76.17 5.81-79.84 14.11-3.8 34.71 27.54 45.99 69.65 4.37 16.3 6.67 31.8 7.1 44.98 2.6.84 5.2 1.56 7.79 2.82l50.98 30.89c13.4 9.45 21.35 24.71 21.35 40.97-.01 27.82-22.84 50.36-50.99 50.36zM512 239.99c-8.84 0-16 7.16-16 16s7.16 16 16 16 16-7.16 16-16-7.16-16-16-16z" class=""></path></svg> <span class="ml2 white">Start</span></a> <a href="/icons" title="Icons" class="link db pv3 ph4 color-inherit bg-black"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="shapes" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-shapes fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M480 288H320c-17.67 0-32 14.33-32 32v160c0 17.67 14.33 32 32 32h160c17.67 0 32-14.33 32-32V320c0-17.67-14.33-32-32-32zm-16 176H336V336h128v128zM128 256C57.31 256 0 313.31 0 384s57.31 128 128 128 128-57.31 128-128-57.31-128-128-128zm0 208c-44.11 0-80-35.89-80-80s35.89-80 80-80 80 35.89 80 80-35.89 80-80 80zm378.98-262.86L400.07 18.29C392.95 6.1 380.47 0 368 0s-24.95 6.1-32.07 18.29L229.02 201.14c-14.26 24.38 3.56 54.86 32.07 54.86h213.82c28.51 0 46.33-30.48 32.07-54.86zM280.61 208L368 58.53 455.39 208H280.61z" class=""></path></svg> <span class="ml2 white">Icons</span></a> <a href="/how-to-use/on-the-web/referencing-icons" title="Docs for Web" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="browser" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-browser fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM48 92c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v24c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V92zm416 334c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V168h416v258zm0-310c0 6.6-5.4 12-12 12H172c-6.6 0-12-5.4-12-12V92c0-6.6 5.4-12 12-12h280c6.6 0 12 5.4 12 12v24z" class=""></path></svg> <span class="ml2 white">Docs for Web</span></a> <a href="/how-to-use/on-the-desktop/setup" title="Docs for Desktop" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="desktop-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-desktop-alt fa-w-18 fa-fw fa-lg"><path fill="currentColor" d="M528 0H48C21.5 0 0 21.5 0 48v288c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM48 54c0-3.3 2.7-6 6-6h468c3.3 0 6 2.7 6 6v234H48V54zm432 434c0 13.3-10.7 24-24 24H120c-13.3 0-24-10.7-24-24s10.7-24 24-24h98.7l18.6-55.8c1.6-4.9 6.2-8.2 11.4-8.2h78.7c5.2 0 9.8 3.3 11.4 8.2l18.6 55.8H456c13.3 0 24 10.7 24 24z" class=""></path></svg> <span class="ml2 white">Docs for Desktop</span></a> <a href="/plans" title="Plans" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bicycle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-bicycle fa-w-20 fa-fw fa-lg"><path fill="currentColor" d="M512.509 192.001c-16.373-.064-32.03 2.955-46.436 8.495l-77.68-125.153A24 24 0 0 0 368.001 64h-64c-8.837 0-16 7.163-16 16v16c0 8.837 7.163 16 16 16h50.649l14.896 24H256.002v-16c0-8.837-7.163-16-16-16h-87.459c-13.441 0-24.777 10.999-24.536 24.437.232 13.044 10.876 23.563 23.995 23.563h48.726l-29.417 47.52c-13.433-4.83-27.904-7.483-42.992-7.52C58.094 191.83.412 249.012.002 319.236-.413 390.279 57.055 448 128.002 448c59.642 0 109.758-40.793 123.967-96h52.033a24 24 0 0 0 20.406-11.367L410.37 201.77l14.938 24.067c-25.455 23.448-41.385 57.081-41.307 94.437.145 68.833 57.899 127.051 126.729 127.719 70.606.685 128.181-55.803 129.255-125.996 1.086-70.941-56.526-129.72-127.476-129.996zM186.75 265.772c9.727 10.529 16.673 23.661 19.642 38.228h-43.306l23.664-38.228zM128.002 400c-44.112 0-80-35.888-80-80s35.888-80 80-80c5.869 0 11.586.653 17.099 1.859l-45.505 73.509C89.715 331.327 101.213 352 120.002 352h81.3c-12.37 28.225-40.562 48-73.3 48zm162.63-96h-35.624c-3.96-31.756-19.556-59.894-42.383-80.026L237.371 184h127.547l-74.286 120zm217.057 95.886c-41.036-2.165-74.049-35.692-75.627-76.755-.812-21.121 6.633-40.518 19.335-55.263l44.433 71.586c4.66 7.508 14.524 9.816 22.032 5.156l13.594-8.437c7.508-4.66 9.817-14.524 5.156-22.032l-44.468-71.643a79.901 79.901 0 0 1 19.858-2.497c44.112 0 80 35.888 80 80-.001 45.54-38.252 82.316-84.313 79.885z" class=""></path></svg> <span class="ml2 white">Plans</span></a> <a href="https://blog.fontawesome.com/" title="Blog" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="typewriter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-typewriter fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M480 192h-32V77.25a32 32 0 0 0-9.38-22.63L393.38 9.38A32 32 0 0 0 370.75 0H96a32 32 0 0 0-32 32v160H32a32 32 0 0 0-32 32v32a32 32 0 0 0 32 32v160a64 64 0 0 0 64 64h320a64 64 0 0 0 64-64V288a32 32 0 0 0 32-32v-32a32 32 0 0 0-32-32zM112 48h240v32a16 16 0 0 0 16 16h32v96h-34.75a32 32 0 0 0-22.62 9.37l-13.26 13.26a32 32 0 0 1-22.62 9.37h-101.5a32 32 0 0 1-22.62-9.37l-13.26-13.26a32 32 0 0 0-22.62-9.37H112zm320 400a16 16 0 0 1-16 16H96a16 16 0 0 1-16-16V288h352zm-288-16h224a16 16 0 0 0 16-16v-16a16 16 0 0 0-16-16H144a16 16 0 0 0-16 16v16a16 16 0 0 0 16 16zm-8-76h24a8 8 0 0 0 8-8v-24a8 8 0 0 0-8-8h-24a8 8 0 0 0-8 8v24a8 8 0 0 0 8 8zm216 0h24a8 8 0 0 0 8-8v-24a8 8 0 0 0-8-8h-24a8 8 0 0 0-8 8v24a8 8 0 0 0 8 8zm-144 0h24a8 8 0 0 0 8-8v-24a8 8 0 0 0-8-8h-24a8 8 0 0 0-8 8v24a8 8 0 0 0 8 8zm72 0h24a8 8 0 0 0 8-8v-24a8 8 0 0 0-8-8h-24a8 8 0 0 0-8 8v24a8 8 0 0 0 8 8z" class=""></path></svg> <span class="ml2 white">Blog</span></a> <a href="/support" title="Support" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="headset" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-headset fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M192 208c0-17.67-14.33-32-32-32h-16c-35.35 0-64 28.65-64 64v48c0 35.35 28.65 64 64 64h16c17.67 0 32-14.33 32-32V208zm176 144c35.35 0 64-28.65 64-64v-48c0-35.35-28.65-64-64-64h-16c-17.67 0-32 14.33-32 32v112c0 17.67 14.33 32 32 32h16zM256 0C113.18 0 4.58 118.83 0 256v16c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-16c0-114.69 93.31-208 208-208s208 93.31 208 208h-.12c.08 2.43.12 165.72.12 165.72 0 23.35-18.93 42.28-42.28 42.28H320c0-26.51-21.49-48-48-48h-32c-26.51 0-48 21.49-48 48s21.49 48 48 48h181.72c49.86 0 90.28-40.42 90.28-90.28V256C507.42 118.83 398.82 0 256 0z" class=""></path></svg> <span class="ml2 white">Support</span></a> <a href="/sessions/sign-in" class="link db pv3 ph4 gray7 hover-bg-blue5  hover-blue2" title="Sign In"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="sign-in-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-sign-in-alt fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M144 112v51.6H48c-26.5 0-48 21.5-48 48v88.6c0 26.5 21.5 48 48 48h96v51.6c0 42.6 51.7 64.2 81.9 33.9l144-143.9c18.7-18.7 18.7-49.1 0-67.9l-144-144C195.8 48 144 69.3 144 112zm192 144L192 400v-99.7H48v-88.6h144V112l144 144zm80 192h-84c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h84c26.5 0 48-21.5 48-48V160c0-26.5-21.5-48-48-48h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96z" class=""></path></svg> <span class="ml2 white">Sign In</span></a></div></div> <!----></nav> <div class="nav-account-menu bg-gray9 white fixed top-0 bottom-0 overflow-y-auto br bw1 b--black-10 overflow-x-hidden"><div class="pa4 tc relative"><div class="relative z-1"><div class="mb3 teal4"><!----> <!----> <!----> <!----> <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="user-graduate" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-user-graduate fa-w-14 fa-fw fa-2x"><g class="fa-group"><path fill="currentColor" d="M351.75 168a128 128 0 0 1-255.5 0z" class="fa-secondary"></path><path fill="currentColor" d="M13.6 79.83l6.4 1.5v58.4c-7 4.19-12 11.5-12 20.27 0 8.4 4.6 15.4 11.1 19.71L3.5 242c-1.7 6.9 2.1 14 7.6 14h41.8c5.5 0 9.3-7.1 7.6-14l-15.6-62.27C51.4 175.42 56 168.42 56 160c0-8.79-5-16.1-12-20.29V87.12l52 12.53V136h256V99.65l82.3-19.82c18.2-4.41 18.2-27.1 0-31.5l-190.4-46a85.9 85.9 0 0 0-39.7 0L13.6 48.23c-18.1 4.39-18.1 27.19 0 31.6zm305.8 240.79L224 416l-95.4-95.4C57.1 323.73 0 382.23 0 454.42V464a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48v-9.6c0-72.17-57.1-130.67-128.6-133.78z" class="fa-primary"></path></g></svg> <!----> <!----></div> <h2 class="mv0 f3 normal flex flex-column items-center"><span class="sr-only">You're signed in as </span> <!----> <span class="fw6"></span></h2></div> <span class="absolute absolute--fill z-0 bg-teal5 o-20"></span></div> <nav><a href="/account" class="link gray7 db pv3 ph4 hover-bg-teal5 hover-teal2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="address-card" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-address-card fa-w-18 fa-fw fa-lg"><path fill="currentColor" d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 400H48V80h480v352zM208 256c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6-10.8 0-18.7 8-44.8 8-26.9 0-33.4-8-44.8-8-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2zM360 320h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8z" class=""></path></svg> <span class="ml2 white">Account Details</span></a> <!----> <a href="/account/cdn" class="link gray7 db pv3 ph4 hover-bg-teal5 hover-teal2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="globe" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg-inline--fa fa-globe fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm179.3 160h-67.2c-6.7-36.5-17.5-68.8-31.2-94.7 42.9 19 77.7 52.7 98.4 94.7zM248 56c18.6 0 48.6 41.2 63.2 112H184.8C199.4 97.2 229.4 56 248 56zM48 256c0-13.7 1.4-27.1 4-40h77.7c-1 13.1-1.7 26.3-1.7 40s.7 26.9 1.7 40H52c-2.6-12.9-4-26.3-4-40zm20.7 88h67.2c6.7 36.5 17.5 68.8 31.2 94.7-42.9-19-77.7-52.7-98.4-94.7zm67.2-176H68.7c20.7-42 55.5-75.7 98.4-94.7-13.7 25.9-24.5 58.2-31.2 94.7zM248 456c-18.6 0-48.6-41.2-63.2-112h126.5c-14.7 70.8-44.7 112-63.3 112zm70.1-160H177.9c-1.1-12.8-1.9-26-1.9-40s.8-27.2 1.9-40h140.3c1.1 12.8 1.9 26 1.9 40s-.9 27.2-2 40zm10.8 142.7c13.7-25.9 24.4-58.2 31.2-94.7h67.2c-20.7 42-55.5 75.7-98.4 94.7zM366.3 296c1-13.1 1.7-26.3 1.7-40s-.7-26.9-1.7-40H444c2.6 12.9 4 26.3 4 40s-1.4 27.1-4 40h-77.7z" class=""></path></svg> <span class="ml2 white">Font Awesome CDN</span></a> <a href="/download" class="link gray7 db pv3 ph4 hover-bg-teal5 hover-teal2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-download fa-w-18 fa-fw fa-lg"><path fill="currentColor" d="M528 288h-92.1l46.1-46.1c30.1-30.1 8.8-81.9-33.9-81.9h-64V48c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v112h-64c-42.6 0-64.2 51.7-33.9 81.9l46.1 46.1H48c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V336c0-26.5-21.5-48-48-48zm-400-80h112V48h96v160h112L288 368 128 208zm400 256H48V336h140.1l65.9 65.9c18.8 18.8 49.1 18.7 67.9 0l65.9-65.9H528v128zm-88-64c0-13.3 10.7-24 24-24s24 10.7 24 24-10.7 24-24 24-24-10.7-24-24z" class=""></path></svg> <span class="ml2 white">Download</span></a> <a href="mailto:hello@fontawesome.com?subject=I need help, Font Awesome!" exact-active-class="bg-black" class="link gray7 db pv3 ph4 hover-bg-teal5 hover-teal2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="headset" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-headset fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M224 336V192.36c0-17.67-14.33-32-32-32h-48c-35.35 0-64 28.65-64 64V304c0 35.35 28.65 64 64 64h48c17.67 0 32-14.33 32-32zm-48-16h-32c-8.82 0-16-7.18-16-16v-79.64c0-8.82 7.18-16 16-16h32V320zM256 0C113.18 0 4.58 118.83 0 256v16c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-16c0-114.69 93.31-208 208-208s208 93.31 208 208h-.12c.08 2.43.12 165.72.12 165.72 0 23.35-18.93 42.28-42.28 42.28H320c0-26.51-21.49-48-48-48h-32c-26.51 0-48 21.49-48 48s21.49 48 48 48h181.72c49.86 0 90.28-40.42 90.28-90.28V256C507.42 118.83 398.82 0 256 0zm112 368c35.35 0 64-28.65 64-64v-79.64c0-35.35-28.65-64-64-64h-48c-17.67 0-32 14.33-32 32V336c0 17.67 14.33 32 32 32h48zm-32-159.64h32c8.82 0 16 7.18 16 16V304c0 8.82-7.18 16-16 16h-32V208.36z" class=""></path></svg> <span class="ml2 white">Support</span></a> <button class="button-reset w-100 tl link gray7 db pv3 ph4 hover-bg-teal5 hover-teal2"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="sign-out-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-sign-out-alt fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M272 112v51.6h-96c-26.5 0-48 21.5-48 48v88.6c0 26.5 21.5 48 48 48h96v51.6c0 42.6 51.7 64.2 81.9 33.9l144-143.9c18.7-18.7 18.7-49.1 0-67.9l-144-144C323.8 48 272 69.3 272 112zm192 144L320 400v-99.7H176v-88.6h144V112l144 144zM96 64h84c6.6 0 12 5.4 12 12v24c0 6.6-5.4 12-12 12H96c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h84c6.6 0 12 5.4 12 12v24c0 6.6-5.4 12-12 12H96c-53 0-96-43-96-96V160c0-53 43-96 96-96z" class=""></path></svg> <span class="ml2 white">Sign Out</span></button></nav></div> <div class="view flex flex-column min-vh-100 db-pr"><div class="dn-pr flex-none w-100 relative z-5"><!----> <!----> <!----> <!----> <!----></div> <header class="header-app dn-pr flex-none w-100 ph4 ph6-ns pv4 z-5 bg-white shadow-2"><div class="mw9 center flex flex-row flex-nowrap items-center justify-between relative"><button type="button" class="db dn-l button-reset tl color-inherit o-60 glow outline-0-focus toggle-app-menu"><span title="Open Main Navigation" class="relative"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="o-0 svg-inline--fa fa-square fa-w-14 fa-fw fa-lg"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z" class=""></path></svg> <span class="app-menu-icon-initial absolute center-a"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bars fa-w-14 fa-fw fa-lg"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class=""></path></svg></span> <span class="app-menu-icon-focus absolute center-a"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="cheeseburger" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cheeseburger fa-w-16 fa-fw fa-lg"><path fill="currentColor" d="M352 176a16 16 0 1 0-16-16 16 16 0 0 0 16 16zm-96-32a16 16 0 1 0-16-16 16 16 0 0 0 16 16zm-96 32a16 16 0 1 0-16-16 16 16 0 0 0 16 16zm352 112a79.33 79.33 0 0 0-28.1-60.4 8.78 8.78 0 0 0 1.2-1.5 72.49 72.49 0 0 0 .6-75.4C442.3 78.7 352.19 32.1 256 32c-96.1.1-186.31 46.7-229.71 118.7a72.45 72.45 0 0 0 .6 75.4 15.76 15.76 0 0 0 1.2 1.5 79.35 79.35 0 0 0-9.3 111.8 78.09 78.09 0 0 0 15 13.7c-.7 2.8-1.7 5.5-1.7 8.5v34.7a83.73 83.73 0 0 0 83.7 83.7h280.6a83.8 83.8 0 0 0 83.71-83.7v-34.7c0-3-1.1-5.7-1.7-8.5A80 80 0 0 0 512 288zM67.37 175.5c34.9-57.9 109-95.4 188.61-95.5 79.71.1 153.81 37.6 188.72 95.5a24.51 24.51 0 0 1-.2 25.2c-2.9 4.7-7.41 7.4-12.21 7.4H79.67c-4.8 0-9.3-2.7-12.2-7.4a24.73 24.73 0 0 1-.1-25.2zM432 396.3a35.72 35.72 0 0 1-35.7 35.7H115.67A35.72 35.72 0 0 1 80 396.3v-25.6h352zm0-76.3H80a32 32 0 0 1 0-64h144l96 48 96-48h16a32 32 0 1 1 0 64z" class=""></path></svg></span></span></button> <div class="mr5-l pr5-l flex flex-row flex-nowrap items-center"><h1 class="ma0 mr5-l mr6-xl"><a href="/" class="router-link-active flex flex-row flex-nowrap items-center justify-center link color-inherit router-link-active hover-primary4 pt1-l outline-0-focus relative top--025-l hover-blue5"><span class="fa-layers fa-fw white fa-lg"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-square fa-w-14 fa-fw primary5"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z" class=""></path></svg> <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="font-awesome-flag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="color-inherit svg-inline--fa fa-font-awesome-flag fa-w-14 fa-fw" style="transform-origin: 0.4375em 0.5em;"><g transform="translate(224 256)" class=""><g transform="translate(0, 0)  scale(0.5625, 0.5625)  rotate(0 0 0)" class=""><path fill="currentColor" d="M444.373 359.424c0 7.168-6.144 10.24-13.312 13.312-28.672 12.288-59.392 23.552-92.16 23.552-46.08 0-67.584-28.672-122.88-28.672-39.936 0-81.92 14.336-115.712 29.696-2.048 1.024-4.096 1.024-6.144 2.048v77.824c0 21.405-16.122 34.816-33.792 34.816-19.456 0-34.816-15.36-34.816-34.816V102.4C12.245 92.16 3.029 75.776 3.029 57.344 3.029 25.6 28.629 0 60.373 0s57.344 25.6 57.344 57.344c0 18.432-8.192 34.816-22.528 45.056v31.744c4.124-1.374 58.768-28.672 114.688-28.672 65.27 0 97.676 27.648 126.976 27.648 38.912 0 81.92-27.648 92.16-27.648 8.192 0 15.36 6.144 15.36 13.312v240.64z" transform="translate(-224 -256)" class=""></path></g></g></svg></span> <span class="dn db-ns dn-l db-xl b f5 mt1 tracked0 ml1 nowrap">Font Awesome</span></a></h1> <div class="dn db-l mr5-l mr6-xl"><form method="post" name="header_search"><label for="header_search_query" class="sr-only">Search Icons:</label> <div class="relative"><input id="header_search_query" type="search" name="header_search_query" value="" placeholder="Search icons..." class="input-reset color-inherit input-focus all-animate br-pill ph4 sans-serif header-search-input ba bw1 bg-gray1 b--gray1"> <button type="submit" name="header_search_submit" class="button-reset color-inherit db o-60 absolute center-v right-1 hover-primary6"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16 fa-fw"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path></svg> <span class="sr-only">Search!</span></button></div> <button type="submit" name="header_search_submit" class="sr-only">Search!</button></form></div> <div><nav class="dn flex-l nr5-l flex-row flex-nowrap items-center nav-app"><a href="/start" class="link color-inherit fw6 mr5 o-60 glow">Start</a> <a href="/icons" class="router-link-active link color-inherit fw6 mr5">Icons</a> <a href="/how-to-use/on-the-web/referencing-icons/basic-use" class="link color-inherit fw6 mr5 o-60 glow">Docs</a> <a href="/support" class="link color-inherit fw6 mr5 o-60 glow">Support</a> <a href="/plans" class="link color-inherit fw6 mr5 o-60 glow">Plans</a> <a href="https://blog.fontawesome.com/" class="link color-inherit fw6 mr5 o-60 glow">Blog</a></nav></div></div> <a href="/sessions/sign-in" class="link color-inherit fw6 o-60 glow pointer" data-balloon="Sign In" data-balloon-pos="left"><span class="dn dib-2x v-mid mr1">Sign In</span> <svg aria-labelledby="svg-inline--fa-title-XDj0J0wGuMb6" data-prefix="far" data-icon="sign-in-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-sign-in-alt fa-w-16 fa-fw fa-lg"><title id="svg-inline--fa-title-XDj0J0wGuMb6" class="">Sign In</title><path fill="currentColor" d="M144 112v51.6H48c-26.5 0-48 21.5-48 48v88.6c0 26.5 21.5 48 48 48h96v51.6c0 42.6 51.7 64.2 81.9 33.9l144-143.9c18.7-18.7 18.7-49.1 0-67.9l-144-144C195.8 48 144 69.3 144 112zm192 144L192 400v-99.7H48v-88.6h144V112l144 144zm80 192h-84c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h84c26.5 0 48-21.5 48-48V160c0-26.5-21.5-48-48-48h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96z" class=""></path></svg></a></div></header> <div class="bg-fa-navy bt bb bw3 b--black-05 fa-white ph5 ph6-ns pv2"><div class="mw9 center relative"><div class="flex flex-column flex-row-l items-center-l pv5 nr5 nb4"><div class="dn db-l pr5 pb4"><a href="/6" class="db link color-inherit relative" style="transition: none;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-dk-navy svg-inline--fa fa-square fa-w-14 fa-6x"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z" class=""></path></svg> <span class="absolute center-a"><svg aria-hidden="true" focusable="false" data-prefix="fac" data-icon="fa6-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363 512" class="fa-yellow svg-inline--fa fa-fa6-6 fa-w-12 fa-6x" style="transform-origin: 0.3544921875em 0.5em;"><g transform="translate(181.5 256)" class=""><g transform="translate(0, 0)  scale(0.5, 0.5)  rotate(0 0 0)" class=""><path fill="currentColor" d="M208.094 167.673C251.01 170.168 287.439 187.634 317.38 220.07C347.821 252.507 363.041 290.932 363.041 335.345C363.041 384.25 345.326 425.918 309.895 460.351C274.963 494.784 232.296 512 181.895 512C130.994 512 87.8285 494.784 52.3977 460.351C17.4659 425.918 0 384 0 334.596C0 307.15 6.48733 280.203 19.462 253.754C32.9357 227.306 55.1423 196.366 86.0819 160.936L200.608 25.4503C216.078 8.48344 231.298 0 246.269 0C260.242 0 271.969 4.74074 281.45 14.2222C291.431 23.2047 296.421 34.1832 296.421 47.1579C296.421 59.1345 291.431 70.6121 281.45 81.5907L208.094 167.673ZM123.509 395.228C139.478 411.197 158.94 419.181 181.895 419.181C204.85 419.181 224.062 411.197 239.532 395.228C255.501 378.76 263.485 358.799 263.485 335.345C263.485 311.891 255.501 292.179 239.532 276.211C224.062 260.242 204.85 252.257 181.895 252.257C158.94 252.257 139.478 260.242 123.509 276.211C108.039 292.179 100.304 311.891 100.304 335.345C100.304 358.799 108.039 378.76 123.509 395.228Z" transform="translate(-181.5 -256)" class=""></path></g></g></svg></span></a></div> <div class="pr5 pb4 flex-grow-1-l"><h2 class="f5 mt0 mb1 lh-title fw6 flex items-center"><a href="/6" class="dn-l f4 link color-inherit relative mr3" style="transition: none;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fa-dk-navy svg-inline--fa fa-square fa-w-14 fa-4x"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z" class=""></path></svg> <span class="absolute center-a"><svg aria-hidden="true" focusable="false" data-prefix="fac" data-icon="fa6-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363 512" class="fa-yellow svg-inline--fa fa-fa6-6 fa-w-12 fa-4x" style="transform-origin: 0.3544921875em 0.5em;"><g transform="translate(181.5 256)" class=""><g transform="translate(0, 0)  scale(0.5, 0.5)  rotate(0 0 0)" class=""><path fill="currentColor" d="M208.094 167.673C251.01 170.168 287.439 187.634 317.38 220.07C347.821 252.507 363.041 290.932 363.041 335.345C363.041 384.25 345.326 425.918 309.895 460.351C274.963 494.784 232.296 512 181.895 512C130.994 512 87.8285 494.784 52.3977 460.351C17.4659 425.918 0 384 0 334.596C0 307.15 6.48733 280.203 19.462 253.754C32.9357 227.306 55.1423 196.366 86.0819 160.936L200.608 25.4503C216.078 8.48344 231.298 0 246.269 0C260.242 0 271.969 4.74074 281.45 14.2222C291.431 23.2047 296.421 34.1832 296.421 47.1579C296.421 59.1345 291.431 70.6121 281.45 81.5907L208.094 167.673ZM123.509 395.228C139.478 411.197 158.94 419.181 181.895 419.181C204.85 419.181 224.062 411.197 239.532 395.228C255.501 378.76 263.485 358.799 263.485 335.345C263.485 311.891 255.501 292.179 239.532 276.211C224.062 260.242 204.85 252.257 181.895 252.257C158.94 252.257 139.478 260.242 123.509 276.211C108.039 292.179 100.304 311.891 100.304 335.345C100.304 358.799 108.039 378.76 123.509 395.228Z" transform="translate(-181.5 -256)" class=""></path></g></g></svg></span></a> <span class="db">
             Now Brewing<span class="mr1">…</span> <span class="db dib-ns mt1 mt0-ns">Font Awesome 6!</span></span></h2> <p class="f4-ns mv0 lh-copy fa-gravy mw7-l">The next generation of our icon library + toolkit is coming with <a href="/6" class="link fa-white link-underline-light hover-fa-yellow">more icons</a>, <a href="/6" class="link fa-white link-underline-light hover-fa-yellow">more styles</a>, <a href="/6" class="link fa-white link-underline-light hover-fa-yellow">more services</a>, and <a href="/6" class="link fa-white link-underline-light hover-fa-yellow">more awesome</a>. Pre-order now to get early access and releases over the next year!</p></div> <div class="pr5 pb4 nowrap flex flex-row flex-nowrap items-center f4-ns"><a href="/6" class="db w-100 link fa-yellow hover-fa-dk-yellow active-bg-fa-yellow active-fa-navy ph4 pv3 fa-button br3 fw6 tc" style="transition: none;"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="coffee-pot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mr3 svg-inline--fa fa-coffee-pot fa-w-16"><path fill="currentColor" d="M428,175,480,32H88A88,88,0,0,0,0,120v88a16,16,0,0,0,16,16H32a16,16,0,0,0,16-16V120A40,40,0,0,1,88,80h25.46l34.73,95.53C96.92,215.22,64,276.16,64,344.62c0,51.47,18.62,84.77,49.64,117.71A57.18,57.18,0,0,0,155.17,480H420.84a57.08,57.08,0,0,0,41.45-17.6c31-32.95,49.69-66.24,49.71-117.72C512,276.86,480,215.07,428,175ZM411.47,80l-29.09,80H193.62L164.53,80ZM114.09,320c7.11-46.22,34.2-85.91,72.12-112H392.07c37.25,26.13,63,66.23,69.84,112Z" class=""></path></svg>
           Learn More!
         </a></div> <button type="button" data-balloon="Got it! Collapse this!" data-balloon-pos="left" class="absolute right--075 top--2 mt1 br-100 pointer fa-gravy bg-fa-navy hover-bg-fa-dk-red hover-fa-white bn all-animate w2 h2 z-5 relative"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="absolute center-a svg-inline--fa fa-times fa-w-11"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path></svg> <span class="sr-only">Got it! Collapse this!</span></button></div></div></div>  <div class="flex-grow-1 flex-shrink-0 flex-basis-auto"><div class="mw9 center bg-gray0 flex-grow-1 flex-shrink-0 flex-basis-auto flex flex-column flex-row-l justify-between-l items-stretch-l"><link href="https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css" rel="stylesheet"> <aside class="search-facets br bw1 b--gray1 flex-shrink-0 pv6-l"><div class="search-aside"><div class="relative ph4 ph5-l pv4 nt6-l mb4 f2"><span class="absolute absolute--fill bg-striped-black o-0125 z-0"></span> <div class="relative z-1"><div class="free-folk layout-inline"><script async="" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=fontawesome" id="_carbonads_js"></script></div></div></div> <div class="dn db-l"><div><h2 class="sr-only">Filter icons by collections</h2> <ul class="list pl0 ml0 mt0 mb4"><li class="fw6 link pointer color-inherit pv2 ph5 hover-bg-white hover-blue4 lh-title bg-white"><a href="/icons?d=gallery&amp;m=free" class="link pointer color-inherit"><span class="relative ml5"><span class="fa-li tr tc"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="mr1 svg-inline--fa fa-check-square fa-w-14 fa-fw"><path fill="currentColor" d="M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z" class=""></path></svg></span>
@@ -207,10 +728,10 @@
           </a> <a href="https://twitter.com/fontawesome" target="_blank" class="db link hide-child gray3 hover-white"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mr2 child dn dib-ns orange4 svg-inline--fa fa-twitter fa-w-16 fa-fw"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" class=""></path></svg>
             @fontawesome
           </a></div></div></div></div> <div class="ph4 ph6-l pv5 bg-gray9 gray6 f2"><div class="mw9 center"><div class="flex flex-column flex-row-l flex-wrap flex-nowrap-l items-center justify-center justify-between-l"><div class="flex-grow--1-l pr4-l pb3 pb0-l tc tl-l order-2 order-1-l"><p class="mv0 lh-copy">
-            Made with <svg aria-labelledby="svg-inline--fa-title-BvjJQ6aEgCg3" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16"><title id="svg-inline--fa-title-BvjJQ6aEgCg3" class="">love</title><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" class=""></path></svg> &amp; <a href="https://chasecoffeecompany.com" target="_blank" class="link color-inherit hover-white"><svg aria-labelledby="svg-inline--fa-title-OBPgRDaT7avr" data-prefix="fas" data-icon="coffee" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-coffee fa-w-20"><title id="svg-inline--fa-title-OBPgRDaT7avr" class="">coffee</title><path fill="currentColor" d="M192 384h192c53 0 96-43 96-96h32c70.6 0 128-57.4 128-128S582.6 32 512 32H120c-13.3 0-24 10.7-24 24v232c0 53 43 96 96 96zM512 96c35.3 0 64 28.7 64 64s-28.7 64-64 64h-32V96h32zm47.7 384H48.3c-47.6 0-61-64-36-64h583.3c25 0 11.8 64-35.9 64z" class=""></path></svg></a> in <a href="https://www.google.com/maps/place/Bentonville, AR" target="_blank" class="link color-inherit hover-white">Bentonville</a>, <a href="https://www.google.com/maps/place/Boston, MA" target="_blank" class="link color-inherit hover-white">Boston</a>, <a href="https://www.google.com/maps/place/Joplin, MO" target="_blank" class="link color-inherit hover-white">Joplin</a>, <a href="https://www.google.com/maps/place/Seattle, WA" target="_blank" class="link color-inherit hover-white">Seattle</a>, and <a href="https://www.google.com/maps/place/Vergennes, VT" target="_blank" class="link color-inherit hover-white">Vergennes</a>.
+            Made with <svg aria-labelledby="svg-inline--fa-title-O1DmNijcLkSn" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16"><title id="svg-inline--fa-title-O1DmNijcLkSn" class="">love</title><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" class=""></path></svg> &amp; <a href="https://chasecoffeecompany.com" target="_blank" class="link color-inherit hover-white"><svg aria-labelledby="svg-inline--fa-title-84FFb9iWEm6C" data-prefix="fas" data-icon="coffee" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-coffee fa-w-20"><title id="svg-inline--fa-title-84FFb9iWEm6C" class="">coffee</title><path fill="currentColor" d="M192 384h192c53 0 96-43 96-96h32c70.6 0 128-57.4 128-128S582.6 32 512 32H120c-13.3 0-24 10.7-24 24v232c0 53 43 96 96 96zM512 96c35.3 0 64 28.7 64 64s-28.7 64-64 64h-32V96h32zm47.7 384H48.3c-47.6 0-61-64-36-64h583.3c25 0 11.8 64-35.9 64z" class=""></path></svg></a> in <a href="https://www.google.com/maps/place/Bentonville, AR" target="_blank" class="link color-inherit hover-white">Bentonville</a>, <a href="https://www.google.com/maps/place/Boston, MA" target="_blank" class="link color-inherit hover-white">Boston</a>, <a href="https://www.google.com/maps/place/Joplin, MO" target="_blank" class="link color-inherit hover-white">Joplin</a>, <a href="https://www.google.com/maps/place/Seattle, WA" target="_blank" class="link color-inherit hover-white">Seattle</a>, and <a href="https://www.google.com/maps/place/Vergennes, VT" target="_blank" class="link color-inherit hover-white">Vergennes</a>.
           </p></div> <div class="flex-grow--1-l pb3 pb0-l flex flex-row flex-nowrap justify-between items-center justify-end-l order-1 order-3-l"><p class="lh-copy mv0 pr2 nowrap"> © Fonticons, Inc.</p> <p class="lh-copy mv0 nowrap"><a href="/tos" class="link gray4 hover-white dib v-mid hide-child"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="balance-scale" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="child svg-inline--fa fa-balance-scale fa-w-20"><path fill="currentColor" d="M256 336h-.02c0-16.18 1.34-8.73-85.05-181.51-8.83-17.65-25.89-26.49-42.95-26.49-17.04 0-34.08 8.82-42.92 26.49C-2.06 328.75.02 320.33.02 336H0c0 44.18 57.31 80 128 80s128-35.82 128-80zM83.24 265.13c11.4-22.65 26.02-51.69 44.46-89.1.03-.01.13-.03.29-.03l.02-.04c19.82 39.64 35.03 69.81 46.7 92.96 11.28 22.38 19.7 39.12 25.55 51.08H55.83c6.2-12.68 15.24-30.69 27.41-54.87zM528 464H344V155.93c27.42-8.67 48.59-31.36 54.39-59.93H528c8.84 0 16-7.16 16-16V64c0-8.84-7.16-16-16-16H393.25C380.89 19.77 352.79 0 320 0s-60.89 19.77-73.25 48H112c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h129.61c5.8 28.57 26.97 51.26 54.39 59.93V464H112c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16zM320 112c-17.64 0-32-14.36-32-32s14.36-32 32-32 32 14.36 32 32-14.36 32-32 32zm319.98 224c0-16.18 1.34-8.73-85.05-181.51-8.83-17.65-25.89-26.49-42.95-26.49-17.04 0-34.08 8.82-42.92 26.49-87.12 174.26-85.04 165.84-85.04 181.51H384c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02zm-200.15-16c6.19-12.68 15.23-30.69 27.4-54.87 11.4-22.65 26.02-51.69 44.46-89.1.03-.01.13-.03.29-.03l.02-.04c19.82 39.64 35.03 69.81 46.7 92.96 11.28 22.38 19.7 39.12 25.55 51.08H439.83z" class=""></path></svg>
               Terms
-            </a> <span class="dib v-mid mh2"><svg aria-labelledby="svg-inline--fa-title-Mz2Q5kcM2FsA" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-plus fa-w-14"><title id="svg-inline--fa-title-Mz2Q5kcM2FsA" class="">and</title><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" class=""></path></svg></span> <a href="/privacy" class="link gray4 hover-white dib v-mid hide-child">
+            </a> <span class="dib v-mid mh2"><svg aria-labelledby="svg-inline--fa-title-U9Mq1SCe5Tgm" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-plus fa-w-14"><title id="svg-inline--fa-title-U9Mq1SCe5Tgm" class="">and</title><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" class=""></path></svg></span> <a href="/privacy" class="link gray4 hover-white dib v-mid hide-child">
               Privacy
               <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="user-secret" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="child svg-inline--fa fa-user-secret fa-w-14"><path fill="currentColor" d="M383.9 308.3l23.9-62.6c4-10.5-3.7-21.7-15-21.7h-33.6c5.4-15.1 8.8-31.1 8.8-48 0-6.6-.7-13.1-1.6-19.4C397.1 149 416 139 416 128c0-13.3-27.3-25.1-70.1-33-9.2-32.8-27-65.8-40.6-82.8C299.1 4.3 289.7 0 280.1 0c-4.8 0-9.7 1.1-14.3 3.4C236 18.3 233.5 20.5 224 20.5s-12.3-2.4-41.9-17.2c-4.6-2.3-9.4-3.4-14.3-3.4-9.6 0-18.9 4.3-25.2 12.2-13.5 17-31.4 50-40.6 82.8-42.7 8-70 19.8-70 33.1 0 11 18.9 21 49.6 28.6-1 6.4-1.6 12.8-1.6 19.4 0 16.9 3.5 32.9 8.8 48H56.3c-11.5 0-19.2 11.7-14.7 22.3l25.8 60.2C27.3 329.8 0 372.7 0 422.4v44.8C0 491.9 20.1 512 44.8 512h358.4c24.7 0 44.8-20.1 44.8-44.8v-44.8c0-48.4-25.8-90.4-64.1-114.1zM173 52.5c16.2 8.1 29 16 51 16 21.8 0 34.8-7.9 51-16 19 30.4 25.7 59.2 27.7 66.2-21.8 2.4-48.1 3.9-78.7 3.9s-56.8-1.6-78.7-3.9c2-7.1 8.7-35.8 27.7-66.2zM183.5 464H48v-41.6c0-30.8 16.2-58.6 43.5-74.3l36.8-21.3-23.5-54.8h12.6c17 18.9 38.8 32.9 63.6 40.7l27 47.3zm-55.6-287.9c.1-.2.1-.3.1-.4.1.1 5.5 3.2 6.3 5.8 3.9 11.9 7 24.6 16.5 33.4 8 7.4 47 25.1 64-25 2.8-8.4 15.4-8.4 18.3 0 16 47.4 53.9 34.4 64 25 9.5-8.8 12.7-21.5 16.5-33.4.8-2.5 6.2-5.6 6.3-5.7v.3c0 52.9-43.1 96-96 96s-96-43.1-96-96zM264.5 464L240 360l27-47.3c24.8-7.8 46.6-21.9 63.6-40.7h15.7l-21.5 56.3 33.8 20.8c25.9 16 41.3 43.4 41.3 73.2V464z" class=""></path></svg></a></p></div></div></div></div></div></footer></div> <!----></div><!--function (t,n,r,i){return Rt(e,t,n,r,i,!0)}--></div>
 <div id="modal"></div>
@@ -226,4 +747,4 @@
     <script src="https://embed.typeform.com/embed.js"></script>
   
 
-<iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeMetricsController0" allowpaymentrequest="true" src="https://js.stripe.com/v3/m-outer-93be17fde268c6ff50c5aed9122214d2.html#url=https%3A%2F%2Ffontawesome.com%2Ficons%3Fd%3Dgallery%26m%3Dfree&amp;title=Font%20Awesome&amp;referrer=&amp;muid=NA&amp;sid=NA&amp;version=6&amp;preview=false" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important;"></iframe><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lfwy8YZAAAAAOymsOdsZ7xDAG-TFKW_fij1Wnjg&amp;co=aHR0cHM6Ly9mb250YXdlc29tZS5jb206NDQz&amp;hl=ru&amp;v=NjbyeWjjFy97MXGZ40KrXu3v&amp;size=invisible&amp;cb=9tirxapu5ozp" width="256" height="60" role="presentation" name="a-ry79o92acglp" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><div id="beacon-container"><div data-reactroot="" class="Beacon"><div class="fcy-k7cd9d e1i7t89x0"></div><div class="BeaconContainer is-configDisplayRight is-manual fcy-1kzkca e1swzdlb0" data-css-with-delay="false"><button data-cy="beacon-close-button" class="c-BeaconCloseButton fcy-kc7ly2 e10lzuie0"><span class="c-BeaconCloseButton__label fcy-5th59a e10lzuie1"><span data-cy-component="Text" data-cy="Text" data-blue-ppap="blue" class="c-Text is-span is-13 is-default fcy-iimg26">Close</span></span><span aria-hidden="true" data-cy-component="Icon" data-cy="Icon" data-blue-ppap="blue" class="c-Icon is-noInteract is-iconName-cross-small is-24 c-BeaconCloseButton__iconClose fcy-1kxsy1g" data-icon-name="cross-small"><span class="c-Icon__icon" title="cross-small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.414 12l2.293-2.293a.999.999 0 10-1.414-1.414L12 10.586 9.707 8.293a.999.999 0 10-1.414 1.414L10.586 12l-2.293 2.293a.999.999 0 101.414 1.414L12 13.414l2.293 2.293a.997.997 0 001.414 0 .999.999 0 000-1.414L13.414 12z"></path></svg></span><span class="c-VisuallyHidden fcy-1rt3v4g">cross-small</span></span></button></div><!-- react-empty: 15 --><span></span><!-- react-empty: 7 --><span></span></div></div></body>
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lfwy8YZAAAAAOymsOdsZ7xDAG-TFKW_fij1Wnjg&amp;co=aHR0cHM6Ly9mb250YXdlc29tZS5jb206NDQz&amp;hl=ru&amp;v=NjbyeWjjFy97MXGZ40KrXu3v&amp;size=invisible&amp;cb=5tdbmtw7lyvg" width="256" height="60" role="presentation" name="a-ih83hkf2nnao" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeMetricsController0" allowpaymentrequest="true" src="https://js.stripe.com/v3/m-outer-93be17fde268c6ff50c5aed9122214d2.html#url=https%3A%2F%2Ffontawesome.com%2Ficons%3Fd%3Dgallery%26m%3Dfree&amp;title=Font%20Awesome&amp;referrer=&amp;muid=NA&amp;sid=NA&amp;version=6&amp;preview=false" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important;"></iframe><div id="beacon-container"><div data-reactroot="" class="Beacon"><div class="fcy-k7cd9d e1i7t89x0"></div><div class="BeaconContainer is-configDisplayRight is-manual fcy-1kzkca e1swzdlb0" data-css-with-delay="false"><button data-cy="beacon-close-button" class="c-BeaconCloseButton is-rendered fcy-kc7ly2 e10lzuie0"><span class="c-BeaconCloseButton__label fcy-5th59a e10lzuie1"><span data-cy-component="Text" data-cy="Text" data-blue-ppap="blue" class="c-Text is-span is-13 is-default fcy-iimg26">Close</span></span><span aria-hidden="true" data-cy-component="Icon" data-cy="Icon" data-blue-ppap="blue" class="c-Icon is-noInteract is-iconName-cross-small is-24 c-BeaconCloseButton__iconClose fcy-1kxsy1g" data-icon-name="cross-small"><span class="c-Icon__icon" title="cross-small"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.414 12l2.293-2.293a.999.999 0 10-1.414-1.414L12 10.586 9.707 8.293a.999.999 0 10-1.414 1.414L10.586 12l-2.293 2.293a.999.999 0 101.414 1.414L12 13.414l2.293 2.293a.997.997 0 001.414 0 .999.999 0 000-1.414L13.414 12z"></path></svg></span><span class="c-VisuallyHidden fcy-1rt3v4g">cross-small</span></span></button></div><!-- react-empty: 15 --><span></span><!-- react-empty: 7 --><span></span></div></div></body></html>
