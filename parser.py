@@ -4,9 +4,19 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+import requests
 
 driver = webdriver.Safari()
 driver.get('https://fontawesome.com/icons?d=gallery&m=free')
+
+def findI(url, driver):
+    driver.get(url)
+    print(url)
+    sleep(2)
+    dwn = driver.find_element_by_class_name('fa-download')
+    dwn.click()
+    sleep(7)
+
 
 try:
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a")))
@@ -24,8 +34,8 @@ try:
     soup = BeautifulSoup(pageBody, 'html.parser')
     a_list = ['https://fontawesome.com' + x['href'] for x in soup.findAll('a')]
 finally:
-    print(a_list)
+    a_list.pop(0)
+    print('\n\n', len(a_list), '\n\n')
+    for a in a_list:
+        findI(a, driver)
     driver.quit()
-
-with open('parser.html', 'w') as file:
-    file.write(pageBody)
