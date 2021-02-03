@@ -37,7 +37,6 @@ try:
     soup = BeautifulSoup(pageBody, 'html.parser')
     a_list = ['https://fontawesome.com' + x['href'] for x in soup.findAll('a')]
 finally:
-    a_list = a_list[1011:]
     print('\n\n', len(a_list), '\n\n')
     for a in range(len(a_list)):
         print(a+1)
