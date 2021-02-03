@@ -13,9 +13,12 @@ def findI(url, driver):
     driver.get(url)
     print(url)
     sleep(2)
-    dwn = driver.find_element_by_class_name('fa-download')
+    dhtml = driver.find_element_by_css_selector('body').get_attribute('outerHTML')
+    btn = driver.find_element_by_css_selector('li.order-8-l.gray5')
+    btn.click()
+    dwn = driver.find_element_by_css_selector('div.ph5.pv4.bg-gray1.br3.br--bottom')
     dwn.click()
-    sleep(7)
+    sleep(3)
 
 
 try:
@@ -34,8 +37,9 @@ try:
     soup = BeautifulSoup(pageBody, 'html.parser')
     a_list = ['https://fontawesome.com' + x['href'] for x in soup.findAll('a')]
 finally:
-    a_list.pop(0)
+    a_list = a_list[1011:]
     print('\n\n', len(a_list), '\n\n')
-    for a in a_list:
-        findI(a, driver)
+    for a in range(len(a_list)):
+        print(a+1)
+        findI(a_list[a], driver)
     driver.quit()
