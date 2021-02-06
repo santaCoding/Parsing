@@ -30,12 +30,14 @@ class MyInstaCrawler(InstagramAPI):
                 print(traceback.format_exc())
                 print("Sleeping 10 secs")
                 time.sleep(10)
-
-usr = ""
-pasw = ""
+                
+usr = str(input('Enter your login: '))
+pasw = str(input('Enter your password: '))
 ic = MyInstaCrawler(usr, pasw)
 ic.login()
-args = ['']
+arg = str(input('Enter instagram account ID that will be parsed: '))
+args = []
+args.append(arg)
 total_results = []
 for arg in args:
     try:
