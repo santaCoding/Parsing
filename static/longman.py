@@ -14,7 +14,7 @@ headers = ({'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTM
 doc = docx.Document()
 paragraph_format = doc.styles['Normal'].paragraph_format
 paragraph_format.line_spacing = Pt(12)
-url = 'https://www.ldoceonline.com/browse/english/0-9/'
+url = 'https://www.ldoceonline.com/browse/english/a/'
 response = requests.get(url, headers=headers)
 
 def getInnerData(a):
@@ -222,5 +222,5 @@ if response.status_code == 200:
         file_count += 1
         getGroups(a, file_count)
         
-    doc.save('0-9.docx')
+    doc.save('a.docx')
     
