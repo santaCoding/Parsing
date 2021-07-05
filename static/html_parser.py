@@ -39,7 +39,19 @@ def parse_html(html_file):
     house_amount = 0
     for house in houses:
         house_amount += 1
-        title = {'House' : house[0].find('b').text} # finding title of a house
+        house_info = house[0].find('b').text.split()
+        title = {'House' : house[0].find('b').text,
+            'Street_name' : house_info[0],
+            'House_number' : int(house_info[1].replace(',', ''))}
+        if len(house_info) == 5:
+            title.update({'House_number_addition' : None})
+        else:
+            title.update(({'House_number_addition' : house_info[2]}))
+        title.update({'Zip-code' : house_info[-3] + ' ' + house_info[-2],
+            'Place' : house_info[-1]})
+        
+        print(title)
+        
         print(f'{house_amount} house(s) collected from {len(houses)}')
         data = house[0].find_all('td', attrs={'style':'vertical-align:top; padding-left: 7px;'}) # first part of data
         innerdata = []
@@ -136,6 +148,7 @@ def parse_html(html_file):
         title.update(house_data2)
         title.update(text)
         house_data.append(title) # house dict completed
+        break
         
     
             
@@ -148,4 +161,4 @@ def parse_html(html_file):
     file.close()
 
 
-parse_html('4536.html')
+parse_html('4912.html')
