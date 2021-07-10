@@ -39,18 +39,70 @@ def parse_html(html_file):
     house_amount = 0
     for house in houses:
         house_amount += 1
-        house_info = house[0].find('b').text.split()
-        title = {'House' : house[0].find('b').text,
-            'Street_name' : house_info[0],
-            'House_number' : int(house_info[1].replace(',', ''))}
-        if len(house_info) == 5:
-            title.update({'House_number_addition' : None})
-        else:
-            title.update(({'House_number_addition' : house_info[2]}))
-        title.update({'Zip-code' : house_info[-3] + ' ' + house_info[-2],
-            'Place' : house_info[-1]})
+        house_info = house[0].find('b').text.split()   
+        street = ''
+        delete_count = 0
+        first_part = house[0].find('b').text[:house[0].find('b').text.index(',')]
+        second_part = house[0].find('b').text[house[0].find('b').text.index(',')+2:].split()
         
-        print(title)
+        if ') (' in house[0].find('b').text:
+            street = first_part[:first_part.index(')')+1]
+            house_number = ''
+            for symbol in range(len(first_part)-1, 0, -1):
+                house_number = first_part[symbol] + house_number
+                if first_part[symbol] == '(':
+                    break
+            zip = second_part[0] + ' ' + second_part[1]
+            if len(zip) != 7:
+                continue
+            place = second_part[-1]
+            add_number_info = None
+        else:
+            first_part = first_part.split()
+            for word in first_part:
+                word = word.replace(',', '')
+                try:
+                    int(word)
+                    break
+                except:
+                    street += word + ' '
+                    delete_count += 1
+            street = street[:-1] #street
+            del first_part[:delete_count]
+            try:
+                house_number = int(first_part[0]) #number
+            except:
+                continue
+            first_part.pop(0)
+            if len(first_part) != 0:
+                add_number_info = ''
+                for word in first_part:
+                    add_number_info += word + ' '
+                add_number_info = add_number_info[:-1] #add
+            else:
+                add_number_info = None
+
+            zip = second_part[0] + ' ' + second_part[1] #zip
+            if len(zip) != 7:
+                continue
+            place = ''
+            second_part.pop(0)
+            second_part.pop(0)
+
+            for word in second_part:
+                place += word + ' '
+            place = place[:-1] #place
+
+
+
+        title = {'House' : house[0].find('b').text,
+                'Street_name' : street,
+                'House_number' : house_number, 
+                'House_number_addition' : add_number_info,
+                'Zip-code' : zip,
+                'Place' : place}
+
+        
         
         print(f'{house_amount} house(s) collected from {len(houses)}')
         data = house[0].find_all('td', attrs={'style':'vertical-align:top; padding-left: 7px;'}) # first part of data
@@ -58,6 +110,12 @@ def parse_html(html_file):
         for d in data:
             innerdata.append([str(x).strip() for x in d.contents if (str(x) != '<br/>' and str(x).strip() != '' and str(x).strip()[0] != "<")])
         innerdata[0][0] = 'Type_transaction: ' + innerdata[0][0]
+        try:
+            innerdata[0].insert(2, 'Price_type: ' + innerdata[0][1][innerdata[0][1].index(',')+3:])
+            innerdata[0][1] = innerdata[0][1][:innerdata[0][1].index(',')]
+        except:
+            pass
+
         num = ''
         prijsverloop_date = None
         if 'de markt' not in innerdata[0][-1]:
@@ -123,7 +181,60 @@ def parse_html(html_file):
                 else:
                     td[t] = spans[i].text.replace(' ', '_') + '_' + td[t]
                     innerdata2.append(td[t])
+        
+        if 'VvE_checklist_VvE bijdrage' in innerdata2[-1]:
+            innerdata2.append('VvE_bijdrage_hoevaak: ' + innerdata2[-1][innerdata2[-1].index(',')+3:])
+            innerdata2[-2] = innerdata2[-2][:innerdata2[-2].index(',')]
 
+        numeric = ['Oppervlakten_en_inhoud',
+                'Aantal badkamers',
+                'Aantal woonlagen',
+                'Bouwjaar',
+                'Parkeercapaciteit',
+                'Achtertuin', 
+                'Totale oppervlakte',
+                'Capaciteit',
+                'Geen tuin']
+
+        for data in range(len(innerdata2)):
+            if 'Indeling_Aantal woonlagen' in innerdata2[data]:
+                first = innerdata2[data][:innerdata2[data].index(':')]
+                second = innerdata2[data][innerdata2[data].index(':')+2:].replace(' woonlaag', '').replace(' woonlagen', '')
+                try:
+                    int(second)
+                    innerdata2[data] = first + ': ' + second
+                except:
+                    second = second.split()
+                    value = second[0]
+                    second.pop(0)
+                    add = ''
+                    for word in second:
+                        add += word + ' '
+                    innerdata2[data] = first + ': ' + value
+                    innerdata2.insert(data+1, 'Aantal_woonlagen_extraerbij: ' + add[:-1])
+            if 'Achtertuin' in innerdata2[data].split()[0] or 'Geen tuin' in innerdata2[data].split()[0] + ' ' + innerdata2[data].split()[1]:
+                innerdata2[data] = innerdata2[data][:innerdata2[data].index('(')-4]
+            if 'Aantal kamers' in innerdata2[data]:
+                if '(' in innerdata2[data]:
+                    innerdata2.insert(data+1, 'Indeling_Aantal_slaapkamers: ' + innerdata2[data][innerdata2[data].index('(')+1:len(innerdata2[data])-2].split()[0])
+                    innerdata2[data] = 'Indeling_Aantal_kamers: ' + innerdata2[data][innerdata2[data].index(':')+2:].split()[0]
+                else:
+                    innerdata2[data] = 'Indeling_Aantal_kamers: ' + innerdata2[data][innerdata2[data].index(':')+2:].split()[0]
+
+        for data in range(len(innerdata2)):
+            for num in numeric:
+                if num in innerdata2[data].split()[0]:
+                    try:
+                        int(innerdata2[data].split()[-1])
+                    except:
+                        temp = innerdata2[data].split()[:-1]
+                        done = ''
+                        for t in temp:
+                            done += t + ' '
+                        done = done[:-1]
+                        innerdata2[data] = done
+                    
+        
         house_data2 = {}
         for data in innerdata2:
             key = ''
@@ -132,10 +243,12 @@ def parse_html(html_file):
                 if data[d] != ':':
                     key+=data[d]
                 else:
-                    value = data[d+2:]
+                    try:
+                        value = int(data[d+2:])
+                    except:
+                        value = data[d+2:]
                     break
             house_data2.update({key:value})
-
 
         try: 
             text = house[2].find_all('td')[1].contents # test house variable
@@ -148,7 +261,7 @@ def parse_html(html_file):
         title.update(house_data2)
         title.update(text)
         house_data.append(title) # house dict completed
-        break
+        print(title)
         
     
             
@@ -161,4 +274,4 @@ def parse_html(html_file):
     file.close()
 
 
-parse_html('4912.html')
+parse_html('3774.html')
