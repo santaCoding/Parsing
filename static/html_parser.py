@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np # changing 'None' pandas to '-' in pandas dataframe
 import csv
+import os
 
 def parse_html(html_file):
     file = open(html_file, 'r', encoding='utf8')
@@ -195,13 +196,28 @@ def parse_html(html_file):
         for data in range(len(innerdata)):
             if '€' in innerdata[data]:
                 integer = ''
-                for letter in innerdata[data]:
+                for letter in range(len(innerdata[data])):
                     try:
-                        int(letter)
-                        integer += letter
+                        if innerdata[data][letter] == ',' and innerdata[data][letter+1] != '-':
+                            integer += '.'
+                        else:
+                            int(innerdata[data][letter])
+                            integer += innerdata[data][letter]
                     except:
                         pass
                 innerdata[data] = innerdata[data][:innerdata[data].index(':')+1] + ' ' + integer
+            if 'Aanvaarding' in innerdata[data]:
+                date = ''
+                for letter in innerdata[data]:
+                    try:
+                        int(letter)
+                        date += letter
+                    except:
+                        if letter == '-':
+                            date += letter
+                        else:
+                            pass
+                innerdata[data] = 'Aanvaarding: ' + date
 
         house_data1 = {}
         for data in innerdata:
@@ -214,7 +230,10 @@ def parse_html(html_file):
                     try:
                         value = int(data[d+2:])
                     except:
-                        value = data[d+2:]
+                        try:
+                            value = float(data[d+2:])
+                        except:
+                            value = data[d+2:]
                     break
             house_data1.update({key:value})
                 
@@ -250,7 +269,7 @@ def parse_html(html_file):
                 'Bouwjaar',
                 'Parkeercapaciteit',
                 'Achtertuin', 
-                'Totale oppervlakte',
+                'Buitenruimte',
                 'Capaciteit',
                 'Geen tuin']
 
@@ -279,6 +298,7 @@ def parse_html(html_file):
                 else:
                     innerdata2[data] = 'Indeling_Aantal_kamers: ' + innerdata2[data][innerdata2[data].index(':')+2:].split()[0]
 
+        
         for data in range(len(innerdata2)):
             for num in numeric:
                 if num in innerdata2[data].split()[0]:
@@ -292,7 +312,6 @@ def parse_html(html_file):
                         done = done[:-1]
                         innerdata2[data] = done
                     
-        
         house_data2 = {}
         for data in innerdata2:
             key = ''
@@ -307,6 +326,8 @@ def parse_html(html_file):
                         value = data[d+2:]
                     break
             house_data2.update({key:value})
+        
+        
 
         try: 
             text = house[2].find_all('td')[1].contents # test house variable
@@ -326,9 +347,16 @@ def parse_html(html_file):
     df.index += 1
     df = df.replace(np.nan, '-')
     df.to_csv(f'{str(html_file).replace(".html", "")}.csv')
-    print(df)
     print(f'Your file is ready - \" {str(html_file).replace(".html", "")}.csv \"')
     file.close()
+    return df
 
+dfs = []
+for root, dirs, files in os.walk("."):  
+    for file in files:
+        if 'html' in file[file.index('.'):]:
+            dfs.append(parse_html(file))
 
-parse_html('3774.html')
+dfs = pd.concat(dfs).sort_index()
+dfs = dfs.replace(np.nan, '-')
+print(dfs)
